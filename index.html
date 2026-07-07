@@ -1,0 +1,1255 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Lazy Bird Portfolio 慢飞作品集，老智的广告学、品牌策划、视觉设计、政务宣传与数字创意作品空间。"
+    />
+    <title>Lazy Bird Portfolio | 慢飞作品集</title>
+    <style>
+:root {
+  --mist: #a6a7ca;
+  --sea: #289eac;
+  --deep: #205964;
+  --feather: #4a97a8;
+  --orange: #f99405;
+  --cream: #f6e899;
+  --paper: #eeeef0;
+  --ink: #0a0e0d;
+  --white: #fffdf4;
+  --shadow: 8px 8px 0 var(--ink);
+  --line: 4px solid var(--ink);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--mist);
+  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", Arial, sans-serif;
+  line-height: 1.65;
+}
+
+body::selection {
+  color: var(--ink);
+  background: var(--cream);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 32px;
+  background: rgba(166, 167, 202, 0.88);
+  backdrop-filter: blur(14px);
+  border-bottom: 3px solid rgba(10, 14, 13, 0.16);
+}
+
+.brand-pill,
+.nav-links {
+  display: inline-flex;
+  align-items: center;
+  border: var(--line);
+  background: var(--white);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.brand-pill {
+  gap: 12px;
+  padding: 8px 18px 8px 10px;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 30px;
+  color: var(--ink);
+  background: var(--orange);
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.nav-links {
+  gap: 4px;
+  padding: 6px;
+  border-radius: 999px;
+}
+
+.nav-links a {
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  background: var(--cream);
+  outline: 0;
+}
+
+.hero {
+  overflow: hidden;
+  background: var(--mist);
+  border-bottom: var(--line);
+}
+
+.hero-cover {
+  width: 100%;
+  height: auto;
+  min-height: 520px;
+  max-height: 830px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.section {
+  padding: 82px 32px;
+}
+
+.section-header {
+  width: min(1120px, 100%);
+  margin: 0 auto 32px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--deep);
+  font-size: 0.88rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h2 {
+  max-width: 820px;
+  margin-bottom: 0;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.intro-band {
+  background: var(--paper);
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
+  gap: 28px;
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.intro-copy {
+  padding: 30px;
+  background: var(--white);
+  border: var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  font-size: 1.08rem;
+}
+
+.intro-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.quote-ticket {
+  display: grid;
+  align-content: center;
+  gap: 18px;
+  min-height: 220px;
+  padding: 30px;
+  color: var(--ink);
+  background: var(--cream);
+  border: var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.quote-ticket svg {
+  width: 42px;
+  height: 42px;
+  color: var(--orange);
+  stroke-width: 3;
+}
+
+.quote-ticket p {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.capabilities {
+  background:
+    linear-gradient(var(--sea), var(--sea)) bottom / 100% 30% no-repeat,
+    var(--mist);
+}
+
+.capability-grid,
+.project-grid,
+.about-grid,
+.mood-grid {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.capability-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.capability-card,
+.project-card,
+.about-panel,
+.mood-grid figure {
+  background: var(--white);
+  border: var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.capability-card {
+  min-height: 230px;
+  padding: 24px;
+}
+
+.icon-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 22px;
+  color: var(--ink);
+  background: var(--sea);
+  border: 3px solid var(--ink);
+  border-radius: 18px;
+}
+
+.icon-badge svg {
+  width: 28px;
+  height: 28px;
+  stroke-width: 3;
+}
+
+.capability-card:nth-child(1) .icon-badge {
+  background: var(--orange);
+}
+
+.capability-card:nth-child(2) .icon-badge {
+  background: var(--feather);
+}
+
+.capability-card:nth-child(4) .icon-badge {
+  background: var(--cream);
+}
+
+.works {
+  background: var(--paper);
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: min(1120px, 100%);
+  margin: 0 auto 28px;
+}
+
+.filter-button,
+.project-link,
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 10px 18px;
+  color: var(--ink);
+  background: var(--white);
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  box-shadow: 4px 4px 0 var(--ink);
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.filter-button:hover,
+.filter-button:focus-visible,
+.project-link:hover,
+.project-link:focus-visible,
+.contact-button:hover,
+.contact-button:focus-visible {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--ink);
+  outline: 0;
+}
+
+.filter-button.is-active,
+.project-link,
+.contact-button.primary {
+  background: var(--orange);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.project-card {
+  overflow: hidden;
+}
+
+.project-card > img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-bottom: var(--line);
+  background: var(--mist);
+}
+
+.project-body {
+  display: grid;
+  gap: 14px;
+  padding: 24px;
+}
+
+.project-body p {
+  margin-bottom: 0;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: var(--deep);
+  font-weight: 900;
+}
+
+.tag-row,
+.tag-list,
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.tag-row span,
+.tag-list li,
+.skill-list li {
+  padding: 6px 12px;
+  background: var(--cream);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.project-link {
+  width: fit-content;
+  margin-top: 4px;
+}
+
+.about {
+  background: var(--mist);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1fr;
+  gap: 24px;
+}
+
+.about-panel {
+  padding: 28px;
+}
+
+.about-panel p:last-child {
+  margin-bottom: 0;
+}
+
+.skill-list {
+  display: grid;
+}
+
+.skill-list li {
+  width: fit-content;
+  background: var(--white);
+}
+
+.visual-lab {
+  background: var(--sea);
+}
+
+.visual-lab .section-header,
+.visual-lab .eyebrow {
+  color: var(--white);
+}
+
+.visual-lab h2 {
+  color: var(--white);
+}
+
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.mood-grid figure {
+  overflow: hidden;
+  margin: 0;
+}
+
+.mood-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-bottom: var(--line);
+  background: var(--paper);
+}
+
+.mood-grid figure:first-child img,
+.mood-grid figure:nth-child(2) img {
+  aspect-ratio: 16 / 10;
+}
+
+.mood-grid figcaption {
+  min-height: 88px;
+  padding: 18px;
+  font-weight: 900;
+}
+
+.contact-band {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+  padding: 72px 32px;
+  color: var(--white);
+  background: var(--deep);
+  border-top: var(--line);
+  border-bottom: var(--line);
+}
+
+.contact-band > div:first-child {
+  width: min(760px, 100%);
+  margin-left: auto;
+}
+
+.contact-band h2 {
+  color: var(--white);
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: min(420px, 100%);
+  margin-right: auto;
+}
+
+.contact-button {
+  background: var(--cream);
+}
+
+.contact-button svg,
+.project-link svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 3;
+}
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 24px 32px;
+  color: var(--ink);
+  background: var(--cream);
+  font-weight: 900;
+}
+
+.project-dialog {
+  width: min(980px, calc(100% - 32px));
+  max-height: calc(100% - 32px);
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+
+.project-dialog::backdrop {
+  background: rgba(10, 14, 13, 0.5);
+}
+
+.dialog-shell {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.95fr) minmax(0, 1.05fr);
+  overflow: hidden;
+  background: var(--white);
+  border: var(--line);
+  border-radius: 24px;
+  box-shadow: 10px 10px 0 var(--ink);
+}
+
+.dialog-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  background: var(--cream);
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dialog-close svg {
+  stroke-width: 3;
+}
+
+.dialog-cover {
+  background: var(--mist);
+  border-right: var(--line);
+}
+
+.dialog-cover img {
+  width: 100%;
+  height: 100%;
+  min-height: 460px;
+  object-fit: cover;
+}
+
+.dialog-content {
+  padding: 38px;
+  overflow: auto;
+}
+
+.dialog-content h2 {
+  margin-bottom: 12px;
+  font-size: 2rem;
+}
+
+.role-line {
+  color: var(--deep);
+  font-weight: 900;
+}
+
+.project-detail-list {
+  display: grid;
+  gap: 18px;
+  margin: 24px 0;
+}
+
+.project-detail-list div {
+  padding-top: 16px;
+  border-top: 3px solid var(--ink);
+}
+
+.project-detail-list dt {
+  margin-bottom: 6px;
+  font-weight: 900;
+}
+
+.project-detail-list dd {
+  margin: 0;
+}
+
+.toast {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 50;
+  padding: 12px 18px;
+  color: var(--ink);
+  background: var(--cream);
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  box-shadow: 4px 4px 0 var(--ink);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 160ms ease, transform 160ms ease;
+  pointer-events: none;
+  font-weight: 900;
+}
+
+.toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 980px) {
+  .site-header {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 14px;
+  }
+
+  .brand-pill,
+  .nav-links {
+    justify-content: center;
+  }
+
+  .nav-links {
+    overflow-x: auto;
+  }
+
+  .hero-cover {
+    min-height: auto;
+    max-height: none;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .intro-grid,
+  .about-grid,
+  .contact-band,
+  .dialog-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .capability-grid,
+  .project-grid,
+  .mood-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-band > div:first-child,
+  .contact-actions {
+    margin: 0 auto;
+    width: min(720px, 100%);
+  }
+
+  .dialog-cover {
+    border-right: 0;
+    border-bottom: var(--line);
+  }
+
+  .dialog-cover img {
+    min-height: 260px;
+    max-height: 360px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 56px 18px;
+  }
+
+  .site-header {
+    position: static;
+  }
+
+  .brand-pill {
+    font-size: 0.95rem;
+  }
+
+  .nav-links a {
+    padding: 8px 12px;
+  }
+
+  .hero-cover {
+    min-height: auto;
+  }
+
+  h2 {
+    font-size: 1.65rem;
+  }
+
+  .quote-ticket p {
+    font-size: 1.45rem;
+  }
+
+  .capability-grid,
+  .project-grid,
+  .mood-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-copy,
+  .quote-ticket,
+  .capability-card,
+  .about-panel,
+  .project-body,
+  .dialog-content {
+    padding: 22px;
+  }
+
+  .contact-band {
+    padding: 56px 18px;
+  }
+
+  .contact-button,
+  .filter-button,
+  .project-link {
+    width: 100%;
+  }
+
+  .site-footer {
+    padding: 20px 18px;
+  }
+}
+
+    </style>
+<script src="https://unpkg.com/lucide@latest" defer></script>
+    <script defer>
+window.PORTFOLIO_DATA = {
+  profile: {
+    name: "老智",
+    title: "广告学专业学生 / 品牌策划与视觉创作者",
+    slogan: "慢慢创作，认真表达。",
+    email: "your-email@example.com",
+    wechat: "请替换为你的微信号",
+    resumeUrl: "#"
+  },
+
+  capabilities: [
+    {
+      icon: "sparkles",
+      title: "品牌策划",
+      text: "策略、品牌、传播概念与活动路径整理。"
+    },
+    {
+      icon: "image",
+      title: "视觉设计",
+      text: "VI、海报、插画、网页视觉与风格系统。"
+    },
+    {
+      icon: "landmark",
+      title: "政务宣传",
+      text: "公文语境、宣传内容、年轻化视觉表达。"
+    },
+    {
+      icon: "bot",
+      title: "AI 创意",
+      text: "AIGC 图像、创意视频、数字内容实验。"
+    }
+  ],
+
+  keywords: [
+    "松弛感",
+    "手绘感",
+    "年轻化传播",
+    "品牌策略",
+    "视觉叙事",
+    "数字创意"
+  ],
+
+  skills: [
+    "品牌传播策略",
+    "项目文案与内容整理",
+    "视觉风格设定",
+    "政务宣传内容",
+    "网页原型与页面设计",
+    "AI 辅助创意生产"
+  ],
+
+  projects: [
+    {
+      id: "momo-laifu",
+      title: "馍馍來福｜非遗花馍品牌策划",
+      category: "品牌策划",
+      year: "2026",
+      role: "品牌传播概念 / 活动策划 / IP 年轻化",
+      cover: "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201280%20800%22%20role%3D%22img%22%20aria-labelledby%3D%22title%20desc%22%3E%0A%20%20%3Ctitle%20id%3D%22title%22%3E%E9%A6%8D%E9%A6%8D%E4%BE%86%E7%A6%8F%E9%A1%B9%E7%9B%AE%E5%B0%81%E9%9D%A2%3C%2Ftitle%3E%0A%20%20%3Cdesc%20id%3D%22desc%22%3E%E5%A5%B6%E6%B2%B9%E9%BB%84%E8%89%B2%E8%83%8C%E6%99%AF%E4%B8%8A%E7%9A%84%E6%89%8B%E7%BB%98%E8%8A%B1%E9%A6%8D%E3%80%81%E8%92%B8%E7%AC%BC%E5%92%8C%E5%93%81%E7%89%8C%E7%AD%96%E5%88%92%E6%96%87%E5%AD%97%E3%80%82%3C%2Fdesc%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cpattern%20id%3D%22dots%22%20width%3D%2244%22%20height%3D%2244%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%228%22%20cy%3D%228%22%20r%3D%224%22%20fill%3D%22%23f99405%22%20opacity%3D%22.25%22%2F%3E%0A%20%20%20%20%3C%2Fpattern%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Crect%20width%3D%221280%22%20height%3D%22800%22%20fill%3D%22%23f6e899%22%2F%3E%0A%20%20%3Crect%20width%3D%221280%22%20height%3D%22800%22%20fill%3D%22url(%23dots)%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M0%20620%20C160%20560%20280%20690%20420%20630%20C600%20555%20750%20650%20910%20610%20C1070%20570%201130%20620%201280%20565%20L1280%20800%20L0%20800Z%22%20fill%3D%22%23289eac%22%20stroke%3D%22%230a0e0d%22%20stroke-width%3D%2214%22%2F%3E%0A%20%20%3Crect%20x%3D%2282%22%20y%3D%2280%22%20width%3D%221116%22%20height%3D%22640%22%20rx%3D%2246%22%20fill%3D%22%23eeeef0%22%20stroke%3D%22%230a0e0d%22%20stroke-width%3D%2214%22%2F%3E%0A%20%20%3Cg%20transform%3D%22translate(690%20150)%22%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22220%22%20cy%3D%22270%22%20rx%3D%22260%22%20ry%3D%2284%22%20fill%3D%22%23d8b276%22%20stroke%3D%22%230a0e0d%22%20stroke-width%3D%2214%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M10%20210%20C25%2080%20160%2048%20240%20122%20C318%2038%20468%20105%20460%20238%20C453%20352%20335%20393%20230%20335%20C130%20392%20-8%20340%2010%20210Z%22%20fill%3D%22%23fffdf4%22%20stroke%3D%22%230a0e0d%22%20stroke-width%3D%2214%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M130%20150%20C170%20220%20175%20278%20145%20330%22%20fill%3D%22none%22%20stroke%3D%22%230a0e0d%22%20stroke-width%3D%2210%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M262%20124%20C225%20215%20250%20285%20300%20338%22%20fill%3D%22none%22%20stroke%3D%22%230a0e0d%22%20stroke-width%3D%2210%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M365%20165%20C326%20225%20326%20280%20360%20328%22%20fill%3D%22none%22%20stroke%3D%22%230a0e0d%22%20stroke-width%3D%2210%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22166%22%20cy%3D%22242%22%20r%3D%2218%22%20fill%3D%22%23f99405%22%20stroke%3D%22%230a0e0d%22%20stroke-width%3D%228%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22278%22%20cy%3D%22230%22%20r%3D%2218%22%20fill%3D%22%23f99405%22%20stroke%3D%22%230a0e0d%22%20stroke-width%3D%228%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22265%22%20r%3D%2218%22%20fill%3D%22%23f99405%22%20stroke%3D%22%230a0e0d%22%20stroke-width%3D%228%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cg%20transform%3D%22translate(124%20140)%22%3E%0A%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22170%22%20height%3D%2254%22%20rx%3D%2227%22%20fill%3D%22%23f99405%22%20stroke%3D%22%230a0e0d%22%20stroke-width%3D%2210%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2232%22%20y%3D%2237%22%20font-family%3D%22Microsoft%20YaHei%2C%20PingFang%20SC%2C%20Arial%2C%20sans-serif%22%20font-size%3D%2226%22%20font-weight%3D%22800%22%20fill%3D%22%230a0e0d%22%3E%E5%93%81%E7%89%8C%E7%AD%96%E5%88%92%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%220%22%20y%3D%22150%22%20font-family%3D%22Microsoft%20YaHei%2C%20PingFang%20SC%2C%20Arial%2C%20sans-serif%22%20font-size%3D%2276%22%20font-weight%3D%22900%22%20fill%3D%22%230a0e0d%22%3E%E9%A6%8D%E9%A6%8D%E4%BE%86%E7%A6%8F%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%220%22%20y%3D%22225%22%20font-family%3D%22Microsoft%20YaHei%2C%20PingFang%20SC%2C%20Arial%2C%20sans-serif%22%20font-size%3D%2242%22%20font-weight%3D%22800%22%20fill%3D%22%23205964%22%3E%E9%9D%9E%E9%81%97%E8%8A%B1%E9%A6%8D%E5%B9%B4%E8%BD%BB%E5%8C%96%E4%BC%A0%E6%92%AD%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%20268%20H360%22%20stroke%3D%22%23f99405%22%20stroke-width%3D%2216%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%220%22%20y%3D%22345%22%20font-family%3D%22Microsoft%20YaHei%2C%20PingFang%20SC%2C%20Arial%2C%20sans-serif%22%20font-size%3D%2232%22%20font-weight%3D%22800%22%20fill%3D%22%230a0e0d%22%3E%E9%A6%8D%E6%B3%95%E5%8E%A8%E6%88%BF%EF%BC%8C%E6%8A%8A%E7%88%B1%E8%92%B8%E5%87%BA%E6%9D%A5%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%220%22%20y%3D%22405%22%20font-family%3D%22Microsoft%20YaHei%2C%20PingFang%20SC%2C%20Arial%2C%20sans-serif%22%20font-size%3D%2228%22%20fill%3D%22%230a0e0d%22%3E%E4%BA%B2%E5%AD%90%E4%BA%92%E5%8A%A8%20%2F%20%E5%81%A5%E5%BA%B7%E9%A5%AE%E9%A3%9F%20%2F%20%E9%9D%9E%E9%81%97%E7%94%9F%E6%B4%BB%E5%8C%96%3C%2Ftext%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A",
+      summary:
+        "以 25-35 岁宝妈群体为核心受众，把传统花馍转化为亲子共创体验，建立“馍法厨房，把爱蒸出来”的传播概念。",
+      problem:
+        "花馍在年轻家庭中的认知仍偏传统，容易被视为节庆食品或送礼产品；馍馍來福作为新品牌，也缺少清晰 IP 形象和亲子价值表达。",
+      strategy:
+        "围绕“馍法厨房”设计年轻化传播路径，通过馍小福 IP、产品包装升级、短视频种草、宝宝营养小课堂、商场快闪和 UGC 分享，让宝妈看见健康食材，也让孩子感受非遗花馍的趣味。",
+      result:
+        "项目把非遗花馍从传统节庆语境放进真实家庭生活场景中，形成一个可参与、可购买、可分享的儿童健康花馍品牌方向。",
+      tags: ["非遗传播", "亲子营销", "品牌年轻化", "IP 策划"]
+    },
+    {
+      id: "lazy-bird-site",
+      title: "Lazy Bird Portfolio｜个人作品集网站",
+      category: "网页设计",
+      year: "2026",
+      role: "主题策划 / 页面结构 / 个人视觉系统",
+      cover: "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201672%20941%22%20role%3D%22img%22%20aria-labelledby%3D%22title%20desc%22%3E%0A%20%20%3Ctitle%20id%3D%22title%22%3ELazy%20Bird%20Portfolio%20%E9%A6%96%E9%A1%B5%E4%B8%BB%E8%A7%86%E8%A7%89%3C%2Ftitle%3E%0A%20%20%3Cdesc%20id%3D%22desc%22%3E%E9%9B%BE%E7%B4%AB%E5%A4%A9%E7%A9%BA%E3%80%81%E8%93%9D%E7%BB%BF%E8%89%B2%E6%B5%B7%E9%9D%A2%E3%80%81%E6%A9%99%E8%89%B2%E5%B0%8F%E9%B8%9F%E5%92%8C%E4%BD%9C%E5%93%81%E8%83%BD%E5%8A%9B%E5%8D%A1%E7%89%87%EF%BC%8C%E6%96%87%E5%AD%97%E4%B8%BA%E6%85%A2%E6%85%A2%E5%88%9B%E4%BD%9C%EF%BC%8C%E8%AE%A4%E7%9C%9F%E8%A1%A8%E8%BE%BE%E3%80%82%3C%2Fdesc%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cfilter%20id%3D%22paper%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22120%25%22%20height%3D%22120%25%22%3E%0A%20%20%20%20%20%20%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%22.75%22%20numOctaves%3D%222%22%20result%3D%22noise%22%2F%3E%0A%20%20%20%20%20%20%3CfeColorMatrix%20in%3D%22noise%22%20type%3D%22saturate%22%20values%3D%220%22%2F%3E%0A%20%20%20%20%20%20%3CfeComponentTransfer%3E%0A%20%20%20%20%20%20%20%20%3CfeFuncA%20type%3D%22table%22%20tableValues%3D%220%20.08%22%2F%3E%0A%20%20%20%20%20%20%3C%2FfeComponentTransfer%3E%0A%20%20%20%20%20%20%3CfeBlend%20in%3D%22SourceGraphic%22%20mode%3D%22multiply%22%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20.ink%7Bstroke%3A%230a0e0d%3Bstroke-width%3A8%3Bstroke-linecap%3Around%3Bstroke-linejoin%3Around%7D%0A%20%20%20%20%20%20.font%7Bfont-family%3A%22Microsoft%20YaHei%22%2C%22PingFang%20SC%22%2CArial%2Csans-serif%7D%0A%20%20%20%20%20%20.bold%7Bfont-weight%3A900%7D%0A%20%20%20%20%20%20.mid%7Bfont-weight%3A800%7D%0A%20%20%20%20%3C%2Fstyle%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Crect%20width%3D%221672%22%20height%3D%22941%22%20fill%3D%22%23a6a7ca%22%2F%3E%0A%20%20%3Cg%20filter%3D%22url(%23paper)%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%20710%20C230%20680%20390%20720%20620%20692%20C850%20664%201010%20710%201220%20682%20C1390%20660%201510%20682%201672%20644%20L1672%20941%20L0%20941Z%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%20762%20C230%20738%20415%20760%20640%20744%20C850%20728%201036%20760%201260%20735%20C1430%20718%201540%20730%201672%20706%20L1672%20941%20L0%20941Z%22%20fill%3D%22%2336b7c0%22%20opacity%3D%22.45%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2239%22%20y%3D%2235%22%20width%3D%22315%22%20height%3D%2256%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2284%22%20cy%3D%2264%22%20rx%3D%2235%22%20ry%3D%2220%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2272%22%20cy%3D%2258%22%20r%3D%227%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2245%22%20width%3D%2236%22%20height%3D%2238%22%20rx%3D%228%22%20fill%3D%22%234a97a8%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2273%22%20class%3D%22font%20bold%22%20font-size%3D%2224%22%20fill%3D%22%230a0e0d%22%3ELazy%20Bird%20Portfolio%3C%2Ftext%3E%0A%20%20%20%20%3Cg%20class%3D%22font%20mid%22%20font-size%3D%2220%22%20fill%3D%22%230a0e0d%22%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%221050%22%20y%3D%2267%22%3E%E9%A6%96%E9%A1%B5%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%221155%22%20y%3D%2267%22%3E%E4%BD%9C%E5%93%81%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%221260%22%20y%3D%2267%22%3E%E5%85%B3%E4%BA%8E%E6%88%91%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%221378%22%20y%3D%2267%22%3E%E9%9A%8F%E7%AC%94%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Crect%20x%3D%221053%22%20y%3D%2282%22%20width%3D%2227%22%20height%3D%228%22%20rx%3D%224%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%221531%22%20y%3D%2238%22%20width%3D%2270%22%20height%3D%2248%22%20rx%3D%2224%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M1551%2054%20H1583%20V75%20H1551%20Z%20M1551%2054%20L1567%2067%20L1583%2054%22%20fill%3D%22none%22%20class%3D%22ink%22%20stroke-width%3D%225%22%2F%3E%0A%0A%20%20%20%20%3Ctext%20x%3D%22120%22%20y%3D%22285%22%20class%3D%22font%20bold%22%20font-size%3D%2286%22%20fill%3D%22%230a0e0d%22%3E%E6%85%A2%E6%85%A2%E5%88%9B%E4%BD%9C%EF%BC%8C%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22120%22%20y%3D%22390%22%20class%3D%22font%20bold%22%20font-size%3D%2286%22%20fill%3D%22%230a0e0d%22%3E%E8%AE%A4%E7%9C%9F%E8%A1%A8%E8%BE%BE%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M370%20410%20C455%20397%20505%20399%20578%20392%22%20stroke%3D%22%23f99405%22%20stroke-width%3D%2212%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M125%20442%20C140%20430%20156%20455%20172%20442%20C188%20430%20202%20455%20218%20442%22%20fill%3D%22none%22%20stroke%3D%22%23289eac%22%20stroke-width%3D%227%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22118%22%20y%3D%22500%22%20class%3D%22font%20mid%22%20font-size%3D%2228%22%20fill%3D%22%230a0e0d%22%3E%E6%88%91%E6%98%AF%E8%80%81%E6%99%BA%EF%BC%8C%E4%B8%80%E5%90%8D%E5%B9%BF%E5%91%8A%E5%AD%A6%E4%B8%93%E4%B8%9A%E5%AD%A6%E7%94%9F%EF%BC%8C%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22118%22%20y%3D%22544%22%20class%3D%22font%20mid%22%20font-size%3D%2228%22%20fill%3D%22%230a0e0d%22%3E%E5%85%B3%E6%B3%A8%E5%93%81%E7%89%8C%E7%AD%96%E5%88%92%E3%80%81%E8%A7%86%E8%A7%89%E8%AE%BE%E8%AE%A1%E3%80%81%E6%94%BF%E5%8A%A1%E5%AE%A3%E4%BC%A0%E4%B8%8E%E6%95%B0%E5%AD%97%E5%88%9B%E6%84%8F%E3%80%82%3C%2Ftext%3E%0A%20%20%20%20%3Crect%20x%3D%22118%22%20y%3D%22594%22%20width%3D%22205%22%20height%3D%2260%22%20rx%3D%2230%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22157%22%20y%3D%22633%22%20class%3D%22font%20bold%22%20font-size%3D%2224%22%3E%E6%9F%A5%E7%9C%8B%E4%BD%9C%E5%93%81%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M273%20623%20H296%20M286%20613%20L296%20623%20L286%20633%22%20fill%3D%22none%22%20class%3D%22ink%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%22347%22%20y%3D%22594%22%20width%3D%22205%22%20height%3D%2260%22%20rx%3D%2230%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22398%22%20y%3D%22633%22%20class%3D%22font%20bold%22%20font-size%3D%2224%22%3E%E4%BA%86%E8%A7%A3%E6%88%91%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M501%20623%20H524%20M514%20613%20L524%20623%20L514%20633%22%20fill%3D%22none%22%20class%3D%22ink%22%20stroke-width%3D%224%22%2F%3E%0A%0A%20%20%20%20%3Cg%20transform%3D%22translate(875%20205)%20rotate(-5)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22172%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2242%22%20r%3D%2228%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M50%2026%20L57%2039%20L72%2040%20L61%2050%20L64%2065%20L50%2058%20L36%2065%20L39%2050%20L28%2040%20L43%2039%20Z%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2242%22%20y%3D%2282%22%20class%3D%22font%20bold%22%20font-size%3D%2222%22%3E%E5%93%81%E7%89%8C%E7%AD%96%E5%88%92%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2242%22%20y%3D%22112%22%20class%3D%22font%20mid%22%20font-size%3D%2217%22%3E%E7%AD%96%E7%95%A5%20%2F%20%E5%93%81%E7%89%8C%20%2F%20%E4%BC%A0%E6%92%AD%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(1120%20250)%20rotate(5)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22172%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2242%22%20r%3D%2228%22%20fill%3D%22%234a97a8%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M35%2054%20L49%2038%20L59%2048%20L65%2042%20L75%2056%20Z%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2242%22%20y%3D%2282%22%20class%3D%22font%20bold%22%20font-size%3D%2222%22%3E%E8%A7%86%E8%A7%89%E8%AE%BE%E8%AE%A1%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2242%22%20y%3D%22112%22%20class%3D%22font%20mid%22%20font-size%3D%2217%22%3EVI%20%2F%20%E6%B5%B7%E6%8A%A5%20%2F%20%E6%8F%92%E7%94%BB%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(720%20345)%20rotate(-3)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22172%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2242%22%20r%3D%2228%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M34%2061%20V36%20H66%20V61%20M42%2061%20V48%20H58%20V61%20M42%2043%20H47%20M53%2043%20H58%22%20fill%3D%22none%22%20class%3D%22ink%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2242%22%20y%3D%2282%22%20class%3D%22font%20bold%22%20font-size%3D%2222%22%3E%E6%94%BF%E5%8A%A1%E5%AE%A3%E4%BC%A0%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2242%22%20y%3D%22112%22%20class%3D%22font%20mid%22%20font-size%3D%2217%22%3E%E5%85%AC%E6%96%87%20%2F%20%E5%AE%A3%E4%BC%A0%20%2F%20%E8%A7%86%E8%A7%89%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(945%20420)%20rotate(1)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22164%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2242%22%20r%3D%2228%22%20fill%3D%22%23a6a7ca%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2235%22%20y%3D%2252%22%20class%3D%22font%20bold%22%20font-size%3D%2230%22%3EAI%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2242%22%20y%3D%2282%22%20class%3D%22font%20bold%22%20font-size%3D%2222%22%3EAI%E5%88%9B%E6%84%8F%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2242%22%20y%3D%22112%22%20class%3D%22font%20mid%22%20font-size%3D%2217%22%3EAIGC%20%2F%20%E6%8F%92%E7%94%BB%20%2F%20%E8%A7%86%E9%A2%91%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cpath%20d%3D%22M850%20315%20C795%20338%20785%20370%20755%20394%20M1048%20273%20C1084%20286%201102%20304%201120%20332%20M1060%20410%20C1102%20392%201130%20382%201160%20366%22%20fill%3D%22none%22%20stroke%3D%22%230a0e0d%22%20stroke-width%3D%224%22%20stroke-dasharray%3D%2212%2016%22%20stroke-linecap%3D%22round%22%2F%3E%0A%0A%20%20%20%20%3Cg%20transform%3D%22translate(1145%20440)%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M105%20245%20C25%20220%20-4%20142%2034%2084%20C74%2023%20166%2018%20222%2070%20C270%2018%20364%2029%20400%2098%20C432%20159%20404%20230%20338%20250%20C278%20300%20166%20302%20105%20245Z%22%20fill%3D%22%23e4d0ad%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Cellipse%20cx%3D%22224%22%20cy%3D%22216%22%20rx%3D%22190%22%20ry%3D%2260%22%20fill%3D%22%23dcc39c%22%20opacity%3D%22.5%22%2F%3E%0A%20%20%20%20%20%20%3Cg%20transform%3D%22translate(122%2050)%22%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M0%20102%20C8%2028%2077%20-15%20142%208%20C202%20-8%20265%2037%20262%20111%20C260%20170%20211%20210%20147%20204%20C83%20224%20-8%20181%200%20102Z%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M58%2097%20C76%2085%20100%2086%20118%2099%20M148%2099%20C168%2084%20196%2085%20214%20101%22%20fill%3D%22none%22%20class%3D%22ink%22%20stroke-width%3D%227%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cellipse%20cx%3D%2290%22%20cy%3D%22112%22%20rx%3D%2232%22%20ry%3D%2222%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cellipse%20cx%3D%22180%22%20cy%3D%22112%22%20rx%3D%2232%22%20ry%3D%2222%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22100%22%20cy%3D%22116%22%20r%3D%227%22%20fill%3D%22%230a0e0d%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22170%22%20cy%3D%22116%22%20r%3D%227%22%20fill%3D%22%230a0e0d%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M129%20130%20L146%20130%20L138%20145%20Z%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M85%206%20C125%20-30%20184%20-20%20220%2018%20C186%2018%20165%2050%20152%2070%20C135%2032%20116%2018%2085%206Z%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M15%20166%20C80%20196%20178%20196%20246%20162%20L265%20227%20C188%20255%2082%20250%200%20222Z%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M450%2025%20C505%2012%20552%2048%20556%20105%20L560%20282%20H438%20L450%2025Z%22%20fill%3D%22%234a97a8%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M438%20185%20C490%20160%20535%20165%20560%20193%22%20fill%3D%22none%22%20class%3D%22ink%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%0A%20%20%20%20%3Cg%20transform%3D%22translate(138%20812)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22500%22%20height%3D%2272%22%20rx%3D%2220%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2242%22%20y%3D%2245%22%20class%3D%22font%20mid%22%20font-size%3D%2222%22%3E%E6%8A%8A%E6%AF%8F%E4%B8%80%E4%B8%AA%E6%83%B3%E6%B3%95%EF%BC%8C%E6%85%A2%E6%85%A2%E5%8F%98%E6%88%90%E6%9C%89%E6%84%8F%E4%B9%89%E7%9A%84%E4%BD%9C%E5%93%81%E3%80%82%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M458%2026%20C476%208%20506%2028%20486%2055%20C474%2070%20456%2079%20456%2079%20C456%2079%20438%2070%20426%2055%20C407%2029%20440%209%20458%2026Z%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cpath%20d%3D%22M610%20710%20L636%20653%20L662%20710%20Z%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M636%20653%20V720%22%20class%3D%22ink%22%20fill%3D%22none%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M588%20720%20H686%22%20class%3D%22ink%22%20fill%3D%22none%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M1352%20170%20C1372%20148%201398%20148%201416%20170%20M1468%20205%20C1490%20183%201517%20184%201535%20206%20M1552%20180%20C1571%20160%201595%20160%201610%20180%22%20fill%3D%22none%22%20class%3D%22ink%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M1368%20288%20C1392%20266%201427%20269%201442%20294%20L1368%20294Z%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M630%20565%20C658%20540%20700%20548%20718%20585%20L630%20585Z%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A",
+      summary:
+        "围绕“慢慢创作，认真表达”建立个人作品集主题，让专业能力和个人性格同时被看见。",
+      problem:
+        "普通求职作品集容易只展示项目数量，缺少能被记住的个人气质和叙事线索。",
+      strategy:
+        "以雾紫天空、蓝绿海面、橙色小鸟和粗黑描边建立视觉记忆点，并用首页、作品、关于我、联系的浏览故事组织内容。",
+      result:
+        "形成一个既适合求职展示，也能表达个人创作状态的作品空间。",
+      tags: ["个人品牌", "网页视觉", "作品集", "手绘风格"]
+    },
+    {
+      id: "lazy-bird-palette",
+      title: "Lazy Bird Web Palette｜网站色彩系统",
+      category: "视觉设计",
+      year: "2026",
+      role: "色彩规范 / 页面气质 / 组件风格",
+      cover: "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201600%20900%22%20role%3D%22img%22%20aria-labelledby%3D%22title%20desc%22%3E%0A%20%20%3Ctitle%20id%3D%22title%22%3ELazy%20Bird%20Web%20Palette%20%E7%BD%91%E7%AB%99%E8%89%B2%E5%BD%A9%E5%8D%A1%3C%2Ftitle%3E%0A%20%20%3Cdesc%20id%3D%22desc%22%3E%E9%9B%BE%E7%B4%AB%E3%80%81%E8%93%9D%E7%BB%BF%E3%80%81%E6%B7%B1%E6%B5%B7%E5%A2%A8%E9%9D%92%E3%80%81%E7%BE%BD%E6%AF%9B%E8%93%9D%E3%80%81%E6%A9%99%E8%89%B2%E3%80%81%E5%A5%B6%E6%B2%B9%E9%BB%84%E3%80%81%E9%9B%BE%E7%99%BD%E5%92%8C%E6%89%8B%E7%BB%98%E9%BB%91%E7%BA%BF%E7%9A%84%E8%89%B2%E5%BD%A9%E5%8D%A1%E3%80%82%3C%2Fdesc%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20.font%7Bfont-family%3A%22Microsoft%20YaHei%22%2C%22PingFang%20SC%22%2CArial%2Csans-serif%7D%0A%20%20%20%20.ink%7Bstroke%3A%230a0e0d%3Bstroke-width%3A8%3Bstroke-linejoin%3Around%7D%0A%20%20%20%20.bold%7Bfont-weight%3A900%7D%0A%20%20%20%20.mid%7Bfont-weight%3A800%7D%0A%20%20%3C%2Fstyle%3E%0A%20%20%3Crect%20width%3D%221600%22%20height%3D%22900%22%20fill%3D%22%23a6a7ca%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M0%20740%20C210%20700%20360%20770%20560%20730%20C750%20690%20940%20760%201160%20720%20C1330%20690%201440%20724%201600%20690%20L1600%20900%20L0%20900Z%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%3Ctext%20x%3D%22104%22%20y%3D%22130%22%20class%3D%22font%20bold%22%20font-size%3D%2258%22%20fill%3D%22%230a0e0d%22%3E%E7%BD%91%E7%AB%99%E8%89%B2%E5%BD%A9%E5%8D%A1%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22104%22%20y%3D%22176%22%20class%3D%22font%20mid%22%20font-size%3D%2225%22%20fill%3D%22%230a0e0d%22%3E%E5%8F%82%E8%80%83%E6%89%8B%E7%BB%98%E5%8D%A1%E9%80%9A%E9%A3%8E%E6%A0%BC%EF%BC%9A%E9%BB%91%E8%89%B2%E7%B2%97%E6%8F%8F%E8%BE%B9%E3%80%81%E4%BD%8E%E9%A5%B1%E5%92%8C%E9%9B%BE%E7%B4%AB%E8%83%8C%E6%99%AF%E3%80%81%E8%93%9D%E7%BB%BF%E8%89%B2%E6%B5%B7%E9%9D%A2%E3%80%81%E6%A9%99%E8%89%B2%E8%A7%86%E8%A7%89%E9%94%9A%E7%82%B9%E3%80%82%3C%2Ftext%3E%0A%20%20%3Crect%20x%3D%22104%22%20y%3D%22205%22%20width%3D%22278%22%20height%3D%2256%22%20rx%3D%2228%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%3Ctext%20x%3D%22138%22%20y%3D%22242%22%20class%3D%22font%20bold%22%20font-size%3D%2225%22%20fill%3D%22%230a0e0d%22%3ELAZY%20BIRD%20WEB%20PALETTE%3C%2Ftext%3E%0A%20%20%3Cg%20transform%3D%22translate(104%20320)%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22320%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2232%22%20y%3D%2228%22%20width%3D%2278%22%20height%3D%2278%22%20rx%3D%2222%22%20fill%3D%22%23a6a7ca%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2258%22%20class%3D%22font%20bold%22%20font-size%3D%2228%22%3E%E8%96%B0%E8%A1%A3%E8%8D%89%E9%9B%BE%E7%B4%AB%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2291%22%20class%3D%22font%20bold%22%20font-size%3D%2224%22%20fill%3D%22%23205964%22%3E%23A6A7CA%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%22120%22%20class%3D%22font%20mid%22%20font-size%3D%2219%22%3E%E9%A1%B5%E9%9D%A2%E8%83%8C%E6%99%AF%20%2F%20%E9%A6%96%E5%B1%8F%E6%B0%9B%E5%9B%B4%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(365%200)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22320%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2232%22%20y%3D%2228%22%20width%3D%2278%22%20height%3D%2278%22%20rx%3D%2222%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2258%22%20class%3D%22font%20bold%22%20font-size%3D%2228%22%3E%E6%B5%B7%E9%9D%A2%E8%93%9D%E7%BB%BF%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2291%22%20class%3D%22font%20bold%22%20font-size%3D%2224%22%20fill%3D%22%23205964%22%3E%23289EAC%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%22120%22%20class%3D%22font%20mid%22%20font-size%3D%2219%22%3E%E4%B8%BB%E6%8C%89%E9%92%AE%20%2F%20%E5%AF%BC%E8%88%AA%E6%A0%8F%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(730%200)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22320%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2232%22%20y%3D%2228%22%20width%3D%2278%22%20height%3D%2278%22%20rx%3D%2222%22%20fill%3D%22%23205964%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2258%22%20class%3D%22font%20bold%22%20font-size%3D%2228%22%3E%E6%B7%B1%E6%B5%B7%E5%A2%A8%E9%9D%92%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2291%22%20class%3D%22font%20bold%22%20font-size%3D%2224%22%20fill%3D%22%23205964%22%3E%23205964%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%22120%22%20class%3D%22font%20mid%22%20font-size%3D%2219%22%3E%E6%A0%87%E9%A2%98%E6%B7%B1%E8%89%B2%20%2F%20%E9%A1%B5%E8%84%9A%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(1095%200)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22320%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2232%22%20y%3D%2228%22%20width%3D%2278%22%20height%3D%2278%22%20rx%3D%2222%22%20fill%3D%22%234a97a8%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2258%22%20class%3D%22font%20bold%22%20font-size%3D%2228%22%3E%E7%BE%BD%E6%AF%9B%E8%93%9D%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2291%22%20class%3D%22font%20bold%22%20font-size%3D%2224%22%20fill%3D%22%23205964%22%3E%234A97A8%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%22120%22%20class%3D%22font%20mid%22%20font-size%3D%2219%22%3E%E5%9B%BE%E6%A0%87%20%2F%20%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9D%97%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(0%20165)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22320%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2232%22%20y%3D%2228%22%20width%3D%2278%22%20height%3D%2278%22%20rx%3D%2222%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2258%22%20class%3D%22font%20bold%22%20font-size%3D%2228%22%3E%E6%A9%99%E5%AD%90%E9%87%8D%E7%82%B9%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2291%22%20class%3D%22font%20bold%22%20font-size%3D%2224%22%20fill%3D%22%23205964%22%3E%23F99405%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%22120%22%20class%3D%22font%20mid%22%20font-size%3D%2219%22%3ECTA%20%2F%20%E4%BD%9C%E5%93%81%E9%87%8D%E7%82%B9%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(365%20165)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22320%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2232%22%20y%3D%2228%22%20width%3D%2278%22%20height%3D%2278%22%20rx%3D%2222%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2258%22%20class%3D%22font%20bold%22%20font-size%3D%2228%22%3E%E5%A5%B6%E6%B2%B9%E9%AB%98%E5%85%89%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2291%22%20class%3D%22font%20bold%22%20font-size%3D%2224%22%20fill%3D%22%23205964%22%3E%23F6E899%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%22120%22%20class%3D%22font%20mid%22%20font-size%3D%2219%22%3E%E6%A0%87%E7%AD%BE%20%2F%20hover%20%E9%AB%98%E5%85%89%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(730%20165)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22320%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2232%22%20y%3D%2228%22%20width%3D%2278%22%20height%3D%2278%22%20rx%3D%2222%22%20fill%3D%22%23eeeef0%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2258%22%20class%3D%22font%20bold%22%20font-size%3D%2228%22%3E%E9%9B%BE%E7%99%BD%E5%8D%A1%E7%89%87%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2291%22%20class%3D%22font%20bold%22%20font-size%3D%2224%22%20fill%3D%22%23205964%22%3E%23EEEEF0%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%22120%22%20class%3D%22font%20mid%22%20font-size%3D%2219%22%3E%E5%86%85%E5%AE%B9%E5%8D%A1%E7%89%87%20%2F%20%E7%95%99%E7%99%BD%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(1095%20165)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22320%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2232%22%20y%3D%2228%22%20width%3D%2278%22%20height%3D%2278%22%20rx%3D%2222%22%20fill%3D%22%230a0e0d%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2258%22%20class%3D%22font%20bold%22%20font-size%3D%2228%22%3E%E6%89%8B%E7%BB%98%E9%BB%91%E7%BA%BF%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2291%22%20class%3D%22font%20bold%22%20font-size%3D%2224%22%3E%230A0E0D%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%22120%22%20class%3D%22font%20mid%22%20font-size%3D%2219%22%3E%E6%8F%8F%E8%BE%B9%20%2F%20%E6%AD%A3%E6%96%87%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cg%20transform%3D%22translate(1075%2090)%22%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22100%22%20cy%3D%2270%22%20rx%3D%2286%22%20ry%3D%2244%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2280%22%20y%3D%2230%22%20width%3D%2282%22%20height%3D%2288%22%20rx%3D%2218%22%20fill%3D%22%234a97a8%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22118%22%20cy%3D%2275%22%20r%3D%2224%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2252%22%20cy%3D%2260%22%20r%3D%2214%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cg%20transform%3D%22translate(104%20705)%22%3E%0A%20%20%20%20%3Crect%20width%3D%22740%22%20height%3D%22122%22%20rx%3D%2232%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2234%22%20y%3D%2252%22%20class%3D%22font%20bold%22%20font-size%3D%2230%22%3E%E7%BD%91%E7%AB%99%E9%85%8D%E8%89%B2%E5%BB%BA%E8%AE%AE%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2234%22%20y%3D%2288%22%20class%3D%22font%20mid%22%20font-size%3D%2223%22%3E60%25%20%E8%83%8C%E6%99%AF%E9%9B%BE%E7%B4%AB%20%2F%2025%25%20%E8%93%9D%E7%BB%BF%E4%B8%BB%E8%89%B2%20%2F%2010%25%20%E6%A9%99%E8%89%B2%E9%87%8D%E7%82%B9%20%2F%205%25%20%E5%A5%B6%E6%B2%B9%E9%AB%98%E5%85%89%E4%B8%8E%E9%BB%91%E8%89%B2%E6%8F%8F%E8%BE%B9%3C%2Ftext%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A",
+      summary:
+        "用雾紫、蓝绿、深海墨青、橙色、奶油黄和手绘黑线建立统一的页面气质。",
+      problem:
+        "作品集需要避免过度商务或过度幼稚，在个人化和求职专业度之间找到平衡。",
+      strategy:
+        "用雾紫营造氛围，蓝绿承担秩序，橙色制造视觉记忆点，再用粗黑描边和轻微错位阴影增强手绘结构感。",
+      result:
+        "色彩系统为首页、作品卡片、标签、按钮和内容区提供了稳定的视觉规则。",
+      tags: ["色彩系统", "视觉规范", "手绘卡通", "界面设计"]
+    },
+    {
+      id: "slow-bird-moodboard",
+      title: "慢飞小鸟｜风格参考与视觉语气",
+      category: "视觉设计",
+      year: "2026",
+      role: "风格研究 / 情绪板 / 角色气质",
+      cover: "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201448%201086%22%20role%3D%22img%22%20aria-labelledby%3D%22title%20desc%22%3E%0A%20%20%3Ctitle%20id%3D%22title%22%3ELazy%20Bird%20IP%20%E4%B8%89%E8%A7%86%E5%9B%BE%3C%2Ftitle%3E%0A%20%20%3Cdesc%20id%3D%22desc%22%3E%E7%A9%BF%E8%93%9D%E7%BB%BF%E8%89%B2%E5%8D%AB%E8%A1%A3%E5%92%8C%E5%B8%BD%E5%AD%90%E7%9A%84%E6%A9%99%E8%89%B2%20Lazy%20Bird%20%E6%AD%A3%E8%A7%86%E5%9B%BE%E3%80%81%E4%BE%A7%E8%A7%86%E5%9B%BE%E5%92%8C%E5%90%8E%E8%A7%86%E5%9B%BE%E3%80%82%3C%2Fdesc%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20.font%7Bfont-family%3A%22Microsoft%20YaHei%22%2C%22PingFang%20SC%22%2CArial%2Csans-serif%7D%0A%20%20%20%20.ink%7Bstroke%3A%230a0e0d%3Bstroke-width%3A10%3Bstroke-linecap%3Around%3Bstroke-linejoin%3Around%7D%0A%20%20%20%20.bold%7Bfont-weight%3A900%7D%0A%20%20%20%20.mid%7Bfont-weight%3A800%7D%0A%20%20%3C%2Fstyle%3E%0A%20%20%3Crect%20width%3D%221448%22%20height%3D%221086%22%20fill%3D%22%23fff7df%22%2F%3E%0A%20%20%3Ctext%20x%3D%22420%22%20y%3D%22145%22%20class%3D%22font%20bold%22%20font-size%3D%2270%22%3ELazy%20Bird%20IP%20%E4%B8%89%E8%A7%86%E5%9B%BE%3C%2Ftext%3E%0A%20%20%3Cpath%20d%3D%22M670%20180%20C755%20168%20825%20166%20910%20166%22%20stroke%3D%22%23f99405%22%20stroke-width%3D%2212%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cg%20class%3D%22font%20bold%22%20font-size%3D%2234%22%20fill%3D%22%230a0e0d%22%3E%0A%20%20%20%20%3Ctext%20x%3D%22235%22%20y%3D%22318%22%3E%E6%AD%A3%E8%A7%86%E5%9B%BE%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22694%22%20y%3D%22318%22%3E%E4%BE%A7%E8%A7%86%E5%9B%BE%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%221150%22%20y%3D%22318%22%3E%E5%90%8E%E8%A7%86%E5%9B%BE%3C%2Ftext%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cg%20fill%3D%22none%22%20stroke%3D%22%23289eac%22%20stroke-width%3D%227%22%20stroke-linecap%3D%22round%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M236%20342%20C250%20330%20263%20354%20277%20342%20C291%20330%20304%20354%20318%20342%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M694%20342%20C708%20330%20721%20354%20735%20342%20C749%20330%20762%20354%20776%20342%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M1150%20342%20C1164%20330%201177%20354%201191%20342%20C1205%20330%201218%20354%201232%20342%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cg%20transform%3D%22translate(90%20385)%22%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22210%22%20cy%3D%22210%22%20rx%3D%22155%22%20ry%3D%22150%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M112%2045%20C178%20-5%20280%205%20328%2076%20C260%2078%20222%20120%20205%20156%20C180%20101%20150%2066%20112%2045Z%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M55%20310%20C128%20375%20292%20378%20366%20312%20L400%20532%20C298%20602%20124%20600%2018%20530Z%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M32%20365%20C5%20432%2024%20506%2092%20538%20M388%20365%20C416%20432%20397%20506%20330%20538%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22150%22%20cy%3D%22214%22%20rx%3D%2252%22%20ry%3D%2236%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22270%22%20cy%3D%22214%22%20rx%3D%2252%22%20ry%3D%2236%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22165%22%20cy%3D%22222%22%20r%3D%229%22%20fill%3D%22%230a0e0d%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22254%22%20cy%3D%22222%22%20r%3D%229%22%20fill%3D%22%230a0e0d%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M196%20240%20L222%20240%20L209%20264%20Z%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%20stroke-width%3D%227%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M146%20150%20C165%20140%20188%20140%20207%20152%20M234%20152%20C254%20140%20280%20140%20300%20155%22%20fill%3D%22none%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M142%20455%20H280%20M142%20455%20V510%20M280%20455%20V510%22%20fill%3D%22none%22%20class%3D%22ink%22%20stroke-width%3D%228%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M132%20600%20V668%20M288%20600%20V668%22%20fill%3D%22none%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22115%22%20cy%3D%22690%22%20rx%3D%2252%22%20ry%3D%2224%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22305%22%20cy%3D%22690%22%20rx%3D%2252%22%20ry%3D%2224%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cg%20transform%3D%22translate(560%20405)%22%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22190%22%20cy%3D%22215%22%20rx%3D%22150%22%20ry%3D%22138%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M105%2065%20C168%20-8%20280%2030%20318%20116%20C255%2093%20205%20112%20178%20150%20C158%20102%20130%2078%20105%2065Z%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M20%20300%20C100%20360%20282%20370%20385%20315%20L382%20538%20C286%20602%20108%20592%2016%20530Z%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%20185%20L-45%20218%20L8%20246%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22145%22%20cy%3D%22220%22%20rx%3D%2252%22%20ry%3D%2236%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22160%22%20cy%3D%22228%22%20r%3D%229%22%20fill%3D%22%230a0e0d%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M110%20152%20C130%20140%20155%20142%20174%20158%22%20fill%3D%22none%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M122%20600%20V668%20M278%20600%20V668%22%20fill%3D%22none%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22106%22%20cy%3D%22690%22%20rx%3D%2252%22%20ry%3D%2224%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22296%22%20cy%3D%22690%22%20rx%3D%2252%22%20ry%3D%2224%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M382%20520%20C432%20532%20438%20565%20390%20585%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cg%20transform%3D%22translate(1010%20405)%22%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22210%22%20cy%3D%22210%22%20rx%3D%22155%22%20ry%3D%22150%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M80%2088%20C140%2020%20290%2020%20340%2092%20L340%20156%20C270%20122%20150%20122%2080%20156Z%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M42%20300%20C124%20382%20300%20382%20378%20300%20L408%20532%20C302%20604%20120%20604%2012%20530Z%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M75%20365%20C48%20432%2066%20506%20134%20538%20M348%20365%20C376%20432%20357%20506%20290%20538%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M210%20312%20V505%22%20fill%3D%22none%22%20class%3D%22ink%22%20opacity%3D%22.28%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M188%20600%20V668%20M248%20600%20V668%22%20fill%3D%22none%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22166%22%20cy%3D%22690%22%20rx%3D%2248%22%20ry%3D%2224%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22272%22%20cy%3D%22690%22%20rx%3D%2248%22%20ry%3D%2224%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M193%20570%20C220%20548%20250%20548%20276%20570%20C262%20598%20208%20598%20193%20570Z%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A",
+      summary:
+        "从松弛、手绘、幽默和慢节奏的参考图中，提炼出作品集的角色语气。",
+      problem:
+        "个人作品集需要一个能陪用户浏览作品的视觉分身，但不能变成单纯卖萌的吉祥物。",
+      strategy:
+        "把小鸟定位为创作者状态的外化：看起来有点懒，但一直在观察、思考和慢慢飞。",
+      result:
+        "角色语气帮助网站形成更强的记忆点，也让作品展示不再像模板化简历。",
+      tags: ["情绪板", "角色设定", "视觉语气", "个人化表达"]
+    }
+  ]
+};
+
+    </script>
+    <script defer>
+const data = window.PORTFOLIO_DATA;
+const state = {
+  activeCategory: "全部"
+};
+
+const $ = (selector) => document.querySelector(selector);
+
+function icon(name) {
+  return `<i data-lucide="${name}" aria-hidden="true"></i>`;
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function refreshIcons() {
+  if (window.lucide) {
+    window.lucide.createIcons();
+  }
+}
+
+function renderCapabilities() {
+  const grid = $("#capabilityGrid");
+  grid.innerHTML = data.capabilities
+    .map(
+      (item) => `
+        <article class="capability-card">
+          <span class="icon-badge">${icon(item.icon)}</span>
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.text)}</p>
+        </article>
+      `
+    )
+    .join("");
+}
+
+function renderLists() {
+  $("#keywordList").innerHTML = data.keywords.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+  $("#skillList").innerHTML = data.skills.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+}
+
+function getCategories() {
+  return ["全部", ...new Set(data.projects.map((project) => project.category))];
+}
+
+function renderFilters() {
+  const row = $("#filterRow");
+  row.innerHTML = getCategories()
+    .map(
+      (category) => `
+        <button
+          class="filter-button ${category === state.activeCategory ? "is-active" : ""}"
+          type="button"
+          data-category="${escapeHtml(category)}"
+        >
+          ${escapeHtml(category)}
+        </button>
+      `
+    )
+    .join("");
+
+  row.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.activeCategory = button.dataset.category;
+      renderFilters();
+      renderProjects();
+    });
+  });
+}
+
+function renderProjects() {
+  const grid = $("#projectGrid");
+  const projects =
+    state.activeCategory === "全部"
+      ? data.projects
+      : data.projects.filter((project) => project.category === state.activeCategory);
+
+  grid.innerHTML = projects
+    .map(
+      (project) => `
+        <article class="project-card">
+          <img src="${escapeHtml(project.cover)}" alt="${escapeHtml(project.title)} 项目封面" loading="lazy" />
+          <div class="project-body">
+            <div class="project-meta">
+              <span>${escapeHtml(project.category)}</span>
+              <span>${escapeHtml(project.year)}</span>
+            </div>
+            <h3>${escapeHtml(project.title)}</h3>
+            <p>${escapeHtml(project.summary)}</p>
+            <div class="tag-row">
+              ${project.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}
+            </div>
+            <button class="project-link" type="button" data-project-id="${escapeHtml(project.id)}">
+              ${icon("folder-open")}
+              <span>查看详情</span>
+            </button>
+          </div>
+        </article>
+      `
+    )
+    .join("");
+
+  grid.querySelectorAll("[data-project-id]").forEach((button) => {
+    button.addEventListener("click", () => openProject(button.dataset.projectId));
+  });
+  refreshIcons();
+}
+
+function openProject(projectId) {
+  const project = data.projects.find((item) => item.id === projectId);
+  if (!project) return;
+
+  const dialog = $("#projectDialog");
+  $("#dialogShell").innerHTML = `
+    <button class="dialog-close" type="button" aria-label="关闭项目详情">${icon("x")}</button>
+    <div class="dialog-cover">
+      <img src="${escapeHtml(project.cover)}" alt="${escapeHtml(project.title)} 项目封面" />
+    </div>
+    <div class="dialog-content">
+      <p class="eyebrow">${escapeHtml(project.category)} / ${escapeHtml(project.year)}</p>
+      <h2 id="dialogTitle">${escapeHtml(project.title)}</h2>
+      <p class="role-line">${escapeHtml(project.role)}</p>
+      <p>${escapeHtml(project.summary)}</p>
+      <dl class="project-detail-list">
+        <div>
+          <dt>核心问题</dt>
+          <dd>${escapeHtml(project.problem)}</dd>
+        </div>
+        <div>
+          <dt>创意策略</dt>
+          <dd>${escapeHtml(project.strategy)}</dd>
+        </div>
+        <div>
+          <dt>项目结果</dt>
+          <dd>${escapeHtml(project.result)}</dd>
+        </div>
+      </dl>
+      <div class="tag-row">
+        ${project.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}
+      </div>
+    </div>
+  `;
+
+  dialog.showModal();
+  dialog.querySelector(".dialog-close").addEventListener("click", () => dialog.close());
+  refreshIcons();
+}
+
+function bindDialogBackdrop() {
+  const dialog = $("#projectDialog");
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) {
+      dialog.close();
+    }
+  });
+}
+
+async function copyText(value, label) {
+  try {
+    await navigator.clipboard.writeText(value);
+    showToast(`${label}已复制`);
+  } catch {
+    window.prompt(`复制${label}`, value);
+  }
+}
+
+function showToast(message) {
+  const toast = $("#toast");
+  toast.textContent = message;
+  toast.classList.add("is-visible");
+  window.setTimeout(() => toast.classList.remove("is-visible"), 1800);
+}
+
+function renderContact() {
+  const actions = $("#contactActions");
+  const resumeButton =
+    data.profile.resumeUrl && data.profile.resumeUrl !== "#"
+      ? `
+        <a class="contact-button" href="${escapeHtml(data.profile.resumeUrl)}" target="_blank" rel="noreferrer">
+          ${icon("file-down")}
+          <span>查看简历</span>
+        </a>
+      `
+      : "";
+
+  actions.innerHTML = `
+    <a class="contact-button primary" href="mailto:${escapeHtml(data.profile.email)}">
+      ${icon("mail")}
+      <span>发送邮件</span>
+    </a>
+    <button class="contact-button" type="button" data-copy-email>
+      ${icon("copy")}
+      <span>复制邮箱</span>
+    </button>
+    <button class="contact-button" type="button" data-copy-wechat>
+      ${icon("message-circle")}
+      <span>复制微信</span>
+    </button>
+    ${resumeButton}
+  `;
+
+  actions.querySelector("[data-copy-email]").addEventListener("click", () => {
+    copyText(data.profile.email, "邮箱");
+  });
+  actions.querySelector("[data-copy-wechat]").addEventListener("click", () => {
+    copyText(data.profile.wechat, "微信");
+  });
+}
+
+function boot() {
+  renderCapabilities();
+  renderLists();
+  renderFilters();
+  renderProjects();
+  renderContact();
+  bindDialogBackdrop();
+  refreshIcons();
+}
+
+document.addEventListener("DOMContentLoaded", boot);
+
+    </script>
+</head>
+  <body>
+    <header class="site-header" aria-label="主导航">
+      <a class="brand-pill" href="#home" aria-label="回到首页">
+        <span class="brand-mark" aria-hidden="true">LB</span>
+        <span>Lazy Bird Portfolio</span>
+      </a>
+      <nav class="nav-links" aria-label="页面分区">
+        <a href="#works">作品</a>
+        <a href="#about">关于我</a>
+        <a href="#notes">随笔</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <h1 id="hero-title" class="sr-only">Lazy Bird Portfolio 慢飞作品集</h1>
+        <img
+          class="hero-cover"
+          src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201672%20941%22%20role%3D%22img%22%20aria-labelledby%3D%22title%20desc%22%3E%0A%20%20%3Ctitle%20id%3D%22title%22%3ELazy%20Bird%20Portfolio%20%E9%A6%96%E9%A1%B5%E4%B8%BB%E8%A7%86%E8%A7%89%3C%2Ftitle%3E%0A%20%20%3Cdesc%20id%3D%22desc%22%3E%E9%9B%BE%E7%B4%AB%E5%A4%A9%E7%A9%BA%E3%80%81%E8%93%9D%E7%BB%BF%E8%89%B2%E6%B5%B7%E9%9D%A2%E3%80%81%E6%A9%99%E8%89%B2%E5%B0%8F%E9%B8%9F%E5%92%8C%E4%BD%9C%E5%93%81%E8%83%BD%E5%8A%9B%E5%8D%A1%E7%89%87%EF%BC%8C%E6%96%87%E5%AD%97%E4%B8%BA%E6%85%A2%E6%85%A2%E5%88%9B%E4%BD%9C%EF%BC%8C%E8%AE%A4%E7%9C%9F%E8%A1%A8%E8%BE%BE%E3%80%82%3C%2Fdesc%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cfilter%20id%3D%22paper%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22120%25%22%20height%3D%22120%25%22%3E%0A%20%20%20%20%20%20%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%22.75%22%20numOctaves%3D%222%22%20result%3D%22noise%22%2F%3E%0A%20%20%20%20%20%20%3CfeColorMatrix%20in%3D%22noise%22%20type%3D%22saturate%22%20values%3D%220%22%2F%3E%0A%20%20%20%20%20%20%3CfeComponentTransfer%3E%0A%20%20%20%20%20%20%20%20%3CfeFuncA%20type%3D%22table%22%20tableValues%3D%220%20.08%22%2F%3E%0A%20%20%20%20%20%20%3C%2FfeComponentTransfer%3E%0A%20%20%20%20%20%20%3CfeBlend%20in%3D%22SourceGraphic%22%20mode%3D%22multiply%22%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20.ink%7Bstroke%3A%230a0e0d%3Bstroke-width%3A8%3Bstroke-linecap%3Around%3Bstroke-linejoin%3Around%7D%0A%20%20%20%20%20%20.font%7Bfont-family%3A%22Microsoft%20YaHei%22%2C%22PingFang%20SC%22%2CArial%2Csans-serif%7D%0A%20%20%20%20%20%20.bold%7Bfont-weight%3A900%7D%0A%20%20%20%20%20%20.mid%7Bfont-weight%3A800%7D%0A%20%20%20%20%3C%2Fstyle%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Crect%20width%3D%221672%22%20height%3D%22941%22%20fill%3D%22%23a6a7ca%22%2F%3E%0A%20%20%3Cg%20filter%3D%22url(%23paper)%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%20710%20C230%20680%20390%20720%20620%20692%20C850%20664%201010%20710%201220%20682%20C1390%20660%201510%20682%201672%20644%20L1672%20941%20L0%20941Z%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%20762%20C230%20738%20415%20760%20640%20744%20C850%20728%201036%20760%201260%20735%20C1430%20718%201540%20730%201672%20706%20L1672%20941%20L0%20941Z%22%20fill%3D%22%2336b7c0%22%20opacity%3D%22.45%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2239%22%20y%3D%2235%22%20width%3D%22315%22%20height%3D%2256%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2284%22%20cy%3D%2264%22%20rx%3D%2235%22%20ry%3D%2220%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2272%22%20cy%3D%2258%22%20r%3D%227%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2295%22%20y%3D%2245%22%20width%3D%2236%22%20height%3D%2238%22%20rx%3D%228%22%20fill%3D%22%234a97a8%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2273%22%20class%3D%22font%20bold%22%20font-size%3D%2224%22%20fill%3D%22%230a0e0d%22%3ELazy%20Bird%20Portfolio%3C%2Ftext%3E%0A%20%20%20%20%3Cg%20class%3D%22font%20mid%22%20font-size%3D%2220%22%20fill%3D%22%230a0e0d%22%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%221050%22%20y%3D%2267%22%3E%E9%A6%96%E9%A1%B5%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%221155%22%20y%3D%2267%22%3E%E4%BD%9C%E5%93%81%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%221260%22%20y%3D%2267%22%3E%E5%85%B3%E4%BA%8E%E6%88%91%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%221378%22%20y%3D%2267%22%3E%E9%9A%8F%E7%AC%94%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Crect%20x%3D%221053%22%20y%3D%2282%22%20width%3D%2227%22%20height%3D%228%22%20rx%3D%224%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%221531%22%20y%3D%2238%22%20width%3D%2270%22%20height%3D%2248%22%20rx%3D%2224%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M1551%2054%20H1583%20V75%20H1551%20Z%20M1551%2054%20L1567%2067%20L1583%2054%22%20fill%3D%22none%22%20class%3D%22ink%22%20stroke-width%3D%225%22%2F%3E%0A%0A%20%20%20%20%3Ctext%20x%3D%22120%22%20y%3D%22285%22%20class%3D%22font%20bold%22%20font-size%3D%2286%22%20fill%3D%22%230a0e0d%22%3E%E6%85%A2%E6%85%A2%E5%88%9B%E4%BD%9C%EF%BC%8C%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22120%22%20y%3D%22390%22%20class%3D%22font%20bold%22%20font-size%3D%2286%22%20fill%3D%22%230a0e0d%22%3E%E8%AE%A4%E7%9C%9F%E8%A1%A8%E8%BE%BE%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M370%20410%20C455%20397%20505%20399%20578%20392%22%20stroke%3D%22%23f99405%22%20stroke-width%3D%2212%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M125%20442%20C140%20430%20156%20455%20172%20442%20C188%20430%20202%20455%20218%20442%22%20fill%3D%22none%22%20stroke%3D%22%23289eac%22%20stroke-width%3D%227%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22118%22%20y%3D%22500%22%20class%3D%22font%20mid%22%20font-size%3D%2228%22%20fill%3D%22%230a0e0d%22%3E%E6%88%91%E6%98%AF%E8%80%81%E6%99%BA%EF%BC%8C%E4%B8%80%E5%90%8D%E5%B9%BF%E5%91%8A%E5%AD%A6%E4%B8%93%E4%B8%9A%E5%AD%A6%E7%94%9F%EF%BC%8C%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22118%22%20y%3D%22544%22%20class%3D%22font%20mid%22%20font-size%3D%2228%22%20fill%3D%22%230a0e0d%22%3E%E5%85%B3%E6%B3%A8%E5%93%81%E7%89%8C%E7%AD%96%E5%88%92%E3%80%81%E8%A7%86%E8%A7%89%E8%AE%BE%E8%AE%A1%E3%80%81%E6%94%BF%E5%8A%A1%E5%AE%A3%E4%BC%A0%E4%B8%8E%E6%95%B0%E5%AD%97%E5%88%9B%E6%84%8F%E3%80%82%3C%2Ftext%3E%0A%20%20%20%20%3Crect%20x%3D%22118%22%20y%3D%22594%22%20width%3D%22205%22%20height%3D%2260%22%20rx%3D%2230%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22157%22%20y%3D%22633%22%20class%3D%22font%20bold%22%20font-size%3D%2224%22%3E%E6%9F%A5%E7%9C%8B%E4%BD%9C%E5%93%81%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M273%20623%20H296%20M286%20613%20L296%20623%20L286%20633%22%20fill%3D%22none%22%20class%3D%22ink%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%22347%22%20y%3D%22594%22%20width%3D%22205%22%20height%3D%2260%22%20rx%3D%2230%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22398%22%20y%3D%22633%22%20class%3D%22font%20bold%22%20font-size%3D%2224%22%3E%E4%BA%86%E8%A7%A3%E6%88%91%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M501%20623%20H524%20M514%20613%20L524%20623%20L514%20633%22%20fill%3D%22none%22%20class%3D%22ink%22%20stroke-width%3D%224%22%2F%3E%0A%0A%20%20%20%20%3Cg%20transform%3D%22translate(875%20205)%20rotate(-5)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22172%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2242%22%20r%3D%2228%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M50%2026%20L57%2039%20L72%2040%20L61%2050%20L64%2065%20L50%2058%20L36%2065%20L39%2050%20L28%2040%20L43%2039%20Z%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2242%22%20y%3D%2282%22%20class%3D%22font%20bold%22%20font-size%3D%2222%22%3E%E5%93%81%E7%89%8C%E7%AD%96%E5%88%92%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2242%22%20y%3D%22112%22%20class%3D%22font%20mid%22%20font-size%3D%2217%22%3E%E7%AD%96%E7%95%A5%20%2F%20%E5%93%81%E7%89%8C%20%2F%20%E4%BC%A0%E6%92%AD%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(1120%20250)%20rotate(5)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22172%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2242%22%20r%3D%2228%22%20fill%3D%22%234a97a8%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M35%2054%20L49%2038%20L59%2048%20L65%2042%20L75%2056%20Z%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2242%22%20y%3D%2282%22%20class%3D%22font%20bold%22%20font-size%3D%2222%22%3E%E8%A7%86%E8%A7%89%E8%AE%BE%E8%AE%A1%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2242%22%20y%3D%22112%22%20class%3D%22font%20mid%22%20font-size%3D%2217%22%3EVI%20%2F%20%E6%B5%B7%E6%8A%A5%20%2F%20%E6%8F%92%E7%94%BB%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(720%20345)%20rotate(-3)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22172%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2242%22%20r%3D%2228%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M34%2061%20V36%20H66%20V61%20M42%2061%20V48%20H58%20V61%20M42%2043%20H47%20M53%2043%20H58%22%20fill%3D%22none%22%20class%3D%22ink%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2242%22%20y%3D%2282%22%20class%3D%22font%20bold%22%20font-size%3D%2222%22%3E%E6%94%BF%E5%8A%A1%E5%AE%A3%E4%BC%A0%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2242%22%20y%3D%22112%22%20class%3D%22font%20mid%22%20font-size%3D%2217%22%3E%E5%85%AC%E6%96%87%20%2F%20%E5%AE%A3%E4%BC%A0%20%2F%20%E8%A7%86%E8%A7%89%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(945%20420)%20rotate(1)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22164%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2242%22%20r%3D%2228%22%20fill%3D%22%23a6a7ca%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2235%22%20y%3D%2252%22%20class%3D%22font%20bold%22%20font-size%3D%2230%22%3EAI%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2242%22%20y%3D%2282%22%20class%3D%22font%20bold%22%20font-size%3D%2222%22%3EAI%E5%88%9B%E6%84%8F%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2242%22%20y%3D%22112%22%20class%3D%22font%20mid%22%20font-size%3D%2217%22%3EAIGC%20%2F%20%E6%8F%92%E7%94%BB%20%2F%20%E8%A7%86%E9%A2%91%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cpath%20d%3D%22M850%20315%20C795%20338%20785%20370%20755%20394%20M1048%20273%20C1084%20286%201102%20304%201120%20332%20M1060%20410%20C1102%20392%201130%20382%201160%20366%22%20fill%3D%22none%22%20stroke%3D%22%230a0e0d%22%20stroke-width%3D%224%22%20stroke-dasharray%3D%2212%2016%22%20stroke-linecap%3D%22round%22%2F%3E%0A%0A%20%20%20%20%3Cg%20transform%3D%22translate(1145%20440)%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M105%20245%20C25%20220%20-4%20142%2034%2084%20C74%2023%20166%2018%20222%2070%20C270%2018%20364%2029%20400%2098%20C432%20159%20404%20230%20338%20250%20C278%20300%20166%20302%20105%20245Z%22%20fill%3D%22%23e4d0ad%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Cellipse%20cx%3D%22224%22%20cy%3D%22216%22%20rx%3D%22190%22%20ry%3D%2260%22%20fill%3D%22%23dcc39c%22%20opacity%3D%22.5%22%2F%3E%0A%20%20%20%20%20%20%3Cg%20transform%3D%22translate(122%2050)%22%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M0%20102%20C8%2028%2077%20-15%20142%208%20C202%20-8%20265%2037%20262%20111%20C260%20170%20211%20210%20147%20204%20C83%20224%20-8%20181%200%20102Z%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M58%2097%20C76%2085%20100%2086%20118%2099%20M148%2099%20C168%2084%20196%2085%20214%20101%22%20fill%3D%22none%22%20class%3D%22ink%22%20stroke-width%3D%227%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cellipse%20cx%3D%2290%22%20cy%3D%22112%22%20rx%3D%2232%22%20ry%3D%2222%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cellipse%20cx%3D%22180%22%20cy%3D%22112%22%20rx%3D%2232%22%20ry%3D%2222%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22100%22%20cy%3D%22116%22%20r%3D%227%22%20fill%3D%22%230a0e0d%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22170%22%20cy%3D%22116%22%20r%3D%227%22%20fill%3D%22%230a0e0d%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M129%20130%20L146%20130%20L138%20145%20Z%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M85%206%20C125%20-30%20184%20-20%20220%2018%20C186%2018%20165%2050%20152%2070%20C135%2032%20116%2018%2085%206Z%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M15%20166%20C80%20196%20178%20196%20246%20162%20L265%20227%20C188%20255%2082%20250%200%20222Z%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M450%2025%20C505%2012%20552%2048%20556%20105%20L560%20282%20H438%20L450%2025Z%22%20fill%3D%22%234a97a8%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M438%20185%20C490%20160%20535%20165%20560%20193%22%20fill%3D%22none%22%20class%3D%22ink%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%0A%20%20%20%20%3Cg%20transform%3D%22translate(138%20812)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22500%22%20height%3D%2272%22%20rx%3D%2220%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2242%22%20y%3D%2245%22%20class%3D%22font%20mid%22%20font-size%3D%2222%22%3E%E6%8A%8A%E6%AF%8F%E4%B8%80%E4%B8%AA%E6%83%B3%E6%B3%95%EF%BC%8C%E6%85%A2%E6%85%A2%E5%8F%98%E6%88%90%E6%9C%89%E6%84%8F%E4%B9%89%E7%9A%84%E4%BD%9C%E5%93%81%E3%80%82%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M458%2026%20C476%208%20506%2028%20486%2055%20C474%2070%20456%2079%20456%2079%20C456%2079%20438%2070%20426%2055%20C407%2029%20440%209%20458%2026Z%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cpath%20d%3D%22M610%20710%20L636%20653%20L662%20710%20Z%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M636%20653%20V720%22%20class%3D%22ink%22%20fill%3D%22none%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M588%20720%20H686%22%20class%3D%22ink%22%20fill%3D%22none%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M1352%20170%20C1372%20148%201398%20148%201416%20170%20M1468%20205%20C1490%20183%201517%20184%201535%20206%20M1552%20180%20C1571%20160%201595%20160%201610%20180%22%20fill%3D%22none%22%20class%3D%22ink%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M1368%20288%20C1392%20266%201427%20269%201442%20294%20L1368%20294Z%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M630%20565%20C658%20540%20700%20548%20718%20585%20L630%20585Z%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A"
+          alt="Lazy Bird Portfolio 首页视觉，雾紫天空、海面和躺在岛上的橙色小鸟，文字为慢慢创作，认真表达。"
+        />
+      </section>
+
+      <section class="section intro-band" aria-labelledby="intro-title">
+        <div class="section-header">
+          <p class="eyebrow">Hello, I am Laozhi</p>
+          <h2 id="intro-title">不是赶出来的作品集，是重新整理过的创作档案。</h2>
+        </div>
+        <div class="intro-grid">
+          <article class="intro-copy">
+            <p>
+              我是老智，一名广告学专业学生。这个作品集以“松弛感创作”为核心，
+              把品牌策划、视觉设计、政务宣传、政务推文、AI 创意与网页设计整理在同一个空间里。
+            </p>
+            <p>
+              看起来慢悠悠，但每个作品都希望说清楚一件事：我观察了什么问题，
+              选择了什么策略，又怎样把想法变成有温度的表达。
+            </p>
+          </article>
+          <div class="quote-ticket" aria-label="作品集核心概念">
+            <i data-lucide="quote"></i>
+            <p>慢慢创作，认真表达。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section capabilities" aria-labelledby="capability-title">
+        <div class="section-header">
+          <p class="eyebrow">What I Do</p>
+          <h2 id="capability-title">有个人风格，也有能落地的能力。</h2>
+        </div>
+        <div class="capability-grid" id="capabilityGrid"></div>
+      </section>
+
+      <section class="section works" id="works" aria-labelledby="works-title">
+        <div class="section-header">
+          <p class="eyebrow">Selected Works</p>
+          <h2 id="works-title">一些认真做过、也值得继续打磨的作品。</h2>
+        </div>
+        <div class="filter-row" id="filterRow" aria-label="作品分类"></div>
+        <div class="project-grid" id="projectGrid"></div>
+      </section>
+
+      <section class="section about" id="about" aria-labelledby="about-title">
+        <div class="section-header">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">一个看起来有点慢，但脑子一直在转的创作者。</h2>
+        </div>
+        <div class="about-grid">
+          <article class="about-panel">
+            <h3>创作方向</h3>
+            <p>
+              我更关注年轻化表达、品牌传播语境和视觉叙事。做策划时先问“谁会在什么场景里看见它”，
+              做视觉时再把语气、色彩和节奏统一起来。
+            </p>
+          </article>
+          <article class="about-panel">
+            <h3>个人关键词</h3>
+            <ul class="tag-list" id="keywordList"></ul>
+          </article>
+          <article class="about-panel">
+            <h3>技能清单</h3>
+            <ul class="skill-list" id="skillList"></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section visual-lab" id="notes" aria-labelledby="notes-title">
+        <div class="section-header">
+          <p class="eyebrow">Notes</p>
+          <h2 id="notes-title">慢飞小鸟的视觉备忘录。</h2>
+        </div>
+        <div class="mood-grid">
+          <figure>
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201600%20900%22%20role%3D%22img%22%20aria-labelledby%3D%22title%20desc%22%3E%0A%20%20%3Ctitle%20id%3D%22title%22%3ELazy%20Bird%20Web%20Palette%20%E7%BD%91%E7%AB%99%E8%89%B2%E5%BD%A9%E5%8D%A1%3C%2Ftitle%3E%0A%20%20%3Cdesc%20id%3D%22desc%22%3E%E9%9B%BE%E7%B4%AB%E3%80%81%E8%93%9D%E7%BB%BF%E3%80%81%E6%B7%B1%E6%B5%B7%E5%A2%A8%E9%9D%92%E3%80%81%E7%BE%BD%E6%AF%9B%E8%93%9D%E3%80%81%E6%A9%99%E8%89%B2%E3%80%81%E5%A5%B6%E6%B2%B9%E9%BB%84%E3%80%81%E9%9B%BE%E7%99%BD%E5%92%8C%E6%89%8B%E7%BB%98%E9%BB%91%E7%BA%BF%E7%9A%84%E8%89%B2%E5%BD%A9%E5%8D%A1%E3%80%82%3C%2Fdesc%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20.font%7Bfont-family%3A%22Microsoft%20YaHei%22%2C%22PingFang%20SC%22%2CArial%2Csans-serif%7D%0A%20%20%20%20.ink%7Bstroke%3A%230a0e0d%3Bstroke-width%3A8%3Bstroke-linejoin%3Around%7D%0A%20%20%20%20.bold%7Bfont-weight%3A900%7D%0A%20%20%20%20.mid%7Bfont-weight%3A800%7D%0A%20%20%3C%2Fstyle%3E%0A%20%20%3Crect%20width%3D%221600%22%20height%3D%22900%22%20fill%3D%22%23a6a7ca%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M0%20740%20C210%20700%20360%20770%20560%20730%20C750%20690%20940%20760%201160%20720%20C1330%20690%201440%20724%201600%20690%20L1600%20900%20L0%20900Z%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%3Ctext%20x%3D%22104%22%20y%3D%22130%22%20class%3D%22font%20bold%22%20font-size%3D%2258%22%20fill%3D%22%230a0e0d%22%3E%E7%BD%91%E7%AB%99%E8%89%B2%E5%BD%A9%E5%8D%A1%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22104%22%20y%3D%22176%22%20class%3D%22font%20mid%22%20font-size%3D%2225%22%20fill%3D%22%230a0e0d%22%3E%E5%8F%82%E8%80%83%E6%89%8B%E7%BB%98%E5%8D%A1%E9%80%9A%E9%A3%8E%E6%A0%BC%EF%BC%9A%E9%BB%91%E8%89%B2%E7%B2%97%E6%8F%8F%E8%BE%B9%E3%80%81%E4%BD%8E%E9%A5%B1%E5%92%8C%E9%9B%BE%E7%B4%AB%E8%83%8C%E6%99%AF%E3%80%81%E8%93%9D%E7%BB%BF%E8%89%B2%E6%B5%B7%E9%9D%A2%E3%80%81%E6%A9%99%E8%89%B2%E8%A7%86%E8%A7%89%E9%94%9A%E7%82%B9%E3%80%82%3C%2Ftext%3E%0A%20%20%3Crect%20x%3D%22104%22%20y%3D%22205%22%20width%3D%22278%22%20height%3D%2256%22%20rx%3D%2228%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%3Ctext%20x%3D%22138%22%20y%3D%22242%22%20class%3D%22font%20bold%22%20font-size%3D%2225%22%20fill%3D%22%230a0e0d%22%3ELAZY%20BIRD%20WEB%20PALETTE%3C%2Ftext%3E%0A%20%20%3Cg%20transform%3D%22translate(104%20320)%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22320%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2232%22%20y%3D%2228%22%20width%3D%2278%22%20height%3D%2278%22%20rx%3D%2222%22%20fill%3D%22%23a6a7ca%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2258%22%20class%3D%22font%20bold%22%20font-size%3D%2228%22%3E%E8%96%B0%E8%A1%A3%E8%8D%89%E9%9B%BE%E7%B4%AB%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2291%22%20class%3D%22font%20bold%22%20font-size%3D%2224%22%20fill%3D%22%23205964%22%3E%23A6A7CA%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%22120%22%20class%3D%22font%20mid%22%20font-size%3D%2219%22%3E%E9%A1%B5%E9%9D%A2%E8%83%8C%E6%99%AF%20%2F%20%E9%A6%96%E5%B1%8F%E6%B0%9B%E5%9B%B4%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(365%200)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22320%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2232%22%20y%3D%2228%22%20width%3D%2278%22%20height%3D%2278%22%20rx%3D%2222%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2258%22%20class%3D%22font%20bold%22%20font-size%3D%2228%22%3E%E6%B5%B7%E9%9D%A2%E8%93%9D%E7%BB%BF%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2291%22%20class%3D%22font%20bold%22%20font-size%3D%2224%22%20fill%3D%22%23205964%22%3E%23289EAC%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%22120%22%20class%3D%22font%20mid%22%20font-size%3D%2219%22%3E%E4%B8%BB%E6%8C%89%E9%92%AE%20%2F%20%E5%AF%BC%E8%88%AA%E6%A0%8F%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(730%200)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22320%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2232%22%20y%3D%2228%22%20width%3D%2278%22%20height%3D%2278%22%20rx%3D%2222%22%20fill%3D%22%23205964%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2258%22%20class%3D%22font%20bold%22%20font-size%3D%2228%22%3E%E6%B7%B1%E6%B5%B7%E5%A2%A8%E9%9D%92%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2291%22%20class%3D%22font%20bold%22%20font-size%3D%2224%22%20fill%3D%22%23205964%22%3E%23205964%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%22120%22%20class%3D%22font%20mid%22%20font-size%3D%2219%22%3E%E6%A0%87%E9%A2%98%E6%B7%B1%E8%89%B2%20%2F%20%E9%A1%B5%E8%84%9A%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(1095%200)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22320%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2232%22%20y%3D%2228%22%20width%3D%2278%22%20height%3D%2278%22%20rx%3D%2222%22%20fill%3D%22%234a97a8%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2258%22%20class%3D%22font%20bold%22%20font-size%3D%2228%22%3E%E7%BE%BD%E6%AF%9B%E8%93%9D%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2291%22%20class%3D%22font%20bold%22%20font-size%3D%2224%22%20fill%3D%22%23205964%22%3E%234A97A8%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%22120%22%20class%3D%22font%20mid%22%20font-size%3D%2219%22%3E%E5%9B%BE%E6%A0%87%20%2F%20%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9D%97%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(0%20165)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22320%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2232%22%20y%3D%2228%22%20width%3D%2278%22%20height%3D%2278%22%20rx%3D%2222%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2258%22%20class%3D%22font%20bold%22%20font-size%3D%2228%22%3E%E6%A9%99%E5%AD%90%E9%87%8D%E7%82%B9%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2291%22%20class%3D%22font%20bold%22%20font-size%3D%2224%22%20fill%3D%22%23205964%22%3E%23F99405%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%22120%22%20class%3D%22font%20mid%22%20font-size%3D%2219%22%3ECTA%20%2F%20%E4%BD%9C%E5%93%81%E9%87%8D%E7%82%B9%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(365%20165)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22320%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2232%22%20y%3D%2228%22%20width%3D%2278%22%20height%3D%2278%22%20rx%3D%2222%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2258%22%20class%3D%22font%20bold%22%20font-size%3D%2228%22%3E%E5%A5%B6%E6%B2%B9%E9%AB%98%E5%85%89%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2291%22%20class%3D%22font%20bold%22%20font-size%3D%2224%22%20fill%3D%22%23205964%22%3E%23F6E899%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%22120%22%20class%3D%22font%20mid%22%20font-size%3D%2219%22%3E%E6%A0%87%E7%AD%BE%20%2F%20hover%20%E9%AB%98%E5%85%89%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(730%20165)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22320%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2232%22%20y%3D%2228%22%20width%3D%2278%22%20height%3D%2278%22%20rx%3D%2222%22%20fill%3D%22%23eeeef0%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2258%22%20class%3D%22font%20bold%22%20font-size%3D%2228%22%3E%E9%9B%BE%E7%99%BD%E5%8D%A1%E7%89%87%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2291%22%20class%3D%22font%20bold%22%20font-size%3D%2224%22%20fill%3D%22%23205964%22%3E%23EEEEF0%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%22120%22%20class%3D%22font%20mid%22%20font-size%3D%2219%22%3E%E5%86%85%E5%AE%B9%E5%8D%A1%E7%89%87%20%2F%20%E7%95%99%E7%99%BD%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(1095%20165)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22320%22%20height%3D%22132%22%20rx%3D%2228%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2232%22%20y%3D%2228%22%20width%3D%2278%22%20height%3D%2278%22%20rx%3D%2222%22%20fill%3D%22%230a0e0d%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2258%22%20class%3D%22font%20bold%22%20font-size%3D%2228%22%3E%E6%89%8B%E7%BB%98%E9%BB%91%E7%BA%BF%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%2291%22%20class%3D%22font%20bold%22%20font-size%3D%2224%22%3E%230A0E0D%3C%2Ftext%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22145%22%20y%3D%22120%22%20class%3D%22font%20mid%22%20font-size%3D%2219%22%3E%E6%8F%8F%E8%BE%B9%20%2F%20%E6%AD%A3%E6%96%87%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cg%20transform%3D%22translate(1075%2090)%22%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22100%22%20cy%3D%2270%22%20rx%3D%2286%22%20ry%3D%2244%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2280%22%20y%3D%2230%22%20width%3D%2282%22%20height%3D%2288%22%20rx%3D%2218%22%20fill%3D%22%234a97a8%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22118%22%20cy%3D%2275%22%20r%3D%2224%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2252%22%20cy%3D%2260%22%20r%3D%2214%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cg%20transform%3D%22translate(104%20705)%22%3E%0A%20%20%20%20%3Crect%20width%3D%22740%22%20height%3D%22122%22%20rx%3D%2232%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2234%22%20y%3D%2252%22%20class%3D%22font%20bold%22%20font-size%3D%2230%22%3E%E7%BD%91%E7%AB%99%E9%85%8D%E8%89%B2%E5%BB%BA%E8%AE%AE%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2234%22%20y%3D%2288%22%20class%3D%22font%20mid%22%20font-size%3D%2223%22%3E60%25%20%E8%83%8C%E6%99%AF%E9%9B%BE%E7%B4%AB%20%2F%2025%25%20%E8%93%9D%E7%BB%BF%E4%B8%BB%E8%89%B2%20%2F%2010%25%20%E6%A9%99%E8%89%B2%E9%87%8D%E7%82%B9%20%2F%205%25%20%E5%A5%B6%E6%B2%B9%E9%AB%98%E5%85%89%E4%B8%8E%E9%BB%91%E8%89%B2%E6%8F%8F%E8%BE%B9%3C%2Ftext%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A" alt="Lazy Bird Portfolio 色彩卡" loading="lazy" />
+            <figcaption>雾紫做氛围，蓝绿做秩序，橙色做记忆点。</figcaption>
+          </figure>
+          <figure>
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201448%201086%22%20role%3D%22img%22%20aria-labelledby%3D%22title%20desc%22%3E%0A%20%20%3Ctitle%20id%3D%22title%22%3ELazy%20Bird%20IP%20%E4%B8%89%E8%A7%86%E5%9B%BE%3C%2Ftitle%3E%0A%20%20%3Cdesc%20id%3D%22desc%22%3E%E7%A9%BF%E8%93%9D%E7%BB%BF%E8%89%B2%E5%8D%AB%E8%A1%A3%E5%92%8C%E5%B8%BD%E5%AD%90%E7%9A%84%E6%A9%99%E8%89%B2%20Lazy%20Bird%20%E6%AD%A3%E8%A7%86%E5%9B%BE%E3%80%81%E4%BE%A7%E8%A7%86%E5%9B%BE%E5%92%8C%E5%90%8E%E8%A7%86%E5%9B%BE%E3%80%82%3C%2Fdesc%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20.font%7Bfont-family%3A%22Microsoft%20YaHei%22%2C%22PingFang%20SC%22%2CArial%2Csans-serif%7D%0A%20%20%20%20.ink%7Bstroke%3A%230a0e0d%3Bstroke-width%3A10%3Bstroke-linecap%3Around%3Bstroke-linejoin%3Around%7D%0A%20%20%20%20.bold%7Bfont-weight%3A900%7D%0A%20%20%20%20.mid%7Bfont-weight%3A800%7D%0A%20%20%3C%2Fstyle%3E%0A%20%20%3Crect%20width%3D%221448%22%20height%3D%221086%22%20fill%3D%22%23fff7df%22%2F%3E%0A%20%20%3Ctext%20x%3D%22420%22%20y%3D%22145%22%20class%3D%22font%20bold%22%20font-size%3D%2270%22%3ELazy%20Bird%20IP%20%E4%B8%89%E8%A7%86%E5%9B%BE%3C%2Ftext%3E%0A%20%20%3Cpath%20d%3D%22M670%20180%20C755%20168%20825%20166%20910%20166%22%20stroke%3D%22%23f99405%22%20stroke-width%3D%2212%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cg%20class%3D%22font%20bold%22%20font-size%3D%2234%22%20fill%3D%22%230a0e0d%22%3E%0A%20%20%20%20%3Ctext%20x%3D%22235%22%20y%3D%22318%22%3E%E6%AD%A3%E8%A7%86%E5%9B%BE%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22694%22%20y%3D%22318%22%3E%E4%BE%A7%E8%A7%86%E5%9B%BE%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%221150%22%20y%3D%22318%22%3E%E5%90%8E%E8%A7%86%E5%9B%BE%3C%2Ftext%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cg%20fill%3D%22none%22%20stroke%3D%22%23289eac%22%20stroke-width%3D%227%22%20stroke-linecap%3D%22round%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M236%20342%20C250%20330%20263%20354%20277%20342%20C291%20330%20304%20354%20318%20342%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M694%20342%20C708%20330%20721%20354%20735%20342%20C749%20330%20762%20354%20776%20342%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M1150%20342%20C1164%20330%201177%20354%201191%20342%20C1205%20330%201218%20354%201232%20342%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cg%20transform%3D%22translate(90%20385)%22%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22210%22%20cy%3D%22210%22%20rx%3D%22155%22%20ry%3D%22150%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M112%2045%20C178%20-5%20280%205%20328%2076%20C260%2078%20222%20120%20205%20156%20C180%20101%20150%2066%20112%2045Z%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M55%20310%20C128%20375%20292%20378%20366%20312%20L400%20532%20C298%20602%20124%20600%2018%20530Z%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M32%20365%20C5%20432%2024%20506%2092%20538%20M388%20365%20C416%20432%20397%20506%20330%20538%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22150%22%20cy%3D%22214%22%20rx%3D%2252%22%20ry%3D%2236%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22270%22%20cy%3D%22214%22%20rx%3D%2252%22%20ry%3D%2236%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22165%22%20cy%3D%22222%22%20r%3D%229%22%20fill%3D%22%230a0e0d%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22254%22%20cy%3D%22222%22%20r%3D%229%22%20fill%3D%22%230a0e0d%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M196%20240%20L222%20240%20L209%20264%20Z%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%20stroke-width%3D%227%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M146%20150%20C165%20140%20188%20140%20207%20152%20M234%20152%20C254%20140%20280%20140%20300%20155%22%20fill%3D%22none%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M142%20455%20H280%20M142%20455%20V510%20M280%20455%20V510%22%20fill%3D%22none%22%20class%3D%22ink%22%20stroke-width%3D%228%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M132%20600%20V668%20M288%20600%20V668%22%20fill%3D%22none%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22115%22%20cy%3D%22690%22%20rx%3D%2252%22%20ry%3D%2224%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22305%22%20cy%3D%22690%22%20rx%3D%2252%22%20ry%3D%2224%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cg%20transform%3D%22translate(560%20405)%22%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22190%22%20cy%3D%22215%22%20rx%3D%22150%22%20ry%3D%22138%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M105%2065%20C168%20-8%20280%2030%20318%20116%20C255%2093%20205%20112%20178%20150%20C158%20102%20130%2078%20105%2065Z%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M20%20300%20C100%20360%20282%20370%20385%20315%20L382%20538%20C286%20602%20108%20592%2016%20530Z%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%20185%20L-45%20218%20L8%20246%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22145%22%20cy%3D%22220%22%20rx%3D%2252%22%20ry%3D%2236%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22160%22%20cy%3D%22228%22%20r%3D%229%22%20fill%3D%22%230a0e0d%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M110%20152%20C130%20140%20155%20142%20174%20158%22%20fill%3D%22none%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M122%20600%20V668%20M278%20600%20V668%22%20fill%3D%22none%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22106%22%20cy%3D%22690%22%20rx%3D%2252%22%20ry%3D%2224%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22296%22%20cy%3D%22690%22%20rx%3D%2252%22%20ry%3D%2224%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M382%20520%20C432%20532%20438%20565%20390%20585%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cg%20transform%3D%22translate(1010%20405)%22%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22210%22%20cy%3D%22210%22%20rx%3D%22155%22%20ry%3D%22150%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M80%2088%20C140%2020%20290%2020%20340%2092%20L340%20156%20C270%20122%20150%20122%2080%20156Z%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M42%20300%20C124%20382%20300%20382%20378%20300%20L408%20532%20C302%20604%20120%20604%2012%20530Z%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M75%20365%20C48%20432%2066%20506%20134%20538%20M348%20365%20C376%20432%20357%20506%20290%20538%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M210%20312%20V505%22%20fill%3D%22none%22%20class%3D%22ink%22%20opacity%3D%22.28%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M188%20600%20V668%20M248%20600%20V668%22%20fill%3D%22none%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22166%22%20cy%3D%22690%22%20rx%3D%2248%22%20ry%3D%2224%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22272%22%20cy%3D%22690%22%20rx%3D%2248%22%20ry%3D%2224%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M193%20570%20C220%20548%20250%20548%20276%20570%20C262%20598%20208%20598%20193%20570Z%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A" alt="Lazy Bird IP 正视图、侧视图和后视图" loading="lazy" />
+            <figcaption>小鸟是视觉分身：看起来慢悠悠，脑子一直在转。</figcaption>
+          </figure>
+          <figure>
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201080%201080%22%20role%3D%22img%22%20aria-labelledby%3D%22title%20desc%22%3E%0A%20%20%3Ctitle%20id%3D%22title%22%3E%E6%85%A2%E9%A3%9E%E5%B0%8F%E9%B8%9F%E5%8F%82%E8%80%83%E5%9B%BE%3C%2Ftitle%3E%0A%20%20%3Cdesc%20id%3D%22desc%22%3E%E6%A9%99%E8%89%B2%E5%B0%8F%E9%B8%9F%E8%B6%B4%E5%9C%A8%E8%93%9D%E7%BB%BF%E8%89%B2%E6%A0%8F%E6%9D%86%E4%B8%8A%EF%BC%8C%E8%83%8C%E6%99%AF%E6%98%AF%E9%9B%BE%E7%B4%AB%E5%A4%A9%E7%A9%BA%E5%92%8C%E6%B5%B7%E9%9D%A2%E3%80%82%3C%2Fdesc%3E%0A%20%20%3Cstyle%3E.ink%7Bstroke%3A%230a0e0d%3Bstroke-width%3A12%3Bstroke-linecap%3Around%3Bstroke-linejoin%3Around%7D%3C%2Fstyle%3E%0A%20%20%3Crect%20width%3D%221080%22%20height%3D%221080%22%20fill%3D%22%23a6a7ca%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M0%20715%20C170%20680%20290%20730%20450%20700%20C620%20668%20770%20718%201080%20650%20L1080%201080%20L0%201080Z%22%20fill%3D%22%23289eac%22%2F%3E%0A%20%20%3Crect%20x%3D%2272%22%20y%3D%22560%22%20width%3D%22950%22%20height%3D%22120%22%20rx%3D%2260%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%3Cg%20transform%3D%22translate(170%20300)%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%20230%20C35%2050%20240%20-5%20410%2045%20C540%2084%20700%20150%20760%20288%20C650%20325%20466%20340%20270%20324%20C140%20314%2045%20282%200%20230Z%22%20fill%3D%22%23f99405%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M370%2060%20C430%200%20535%2020%20580%2090%20C520%2086%20475%20108%20435%20150%20C418%20108%20395%2082%20370%2060Z%22%20fill%3D%22%23289eac%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22130%22%20cy%3D%22180%22%20rx%3D%2255%22%20ry%3D%2240%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22235%22%20cy%3D%22178%22%20rx%3D%2255%22%20ry%3D%2240%22%20fill%3D%22%23fffdf4%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22145%22%20cy%3D%22185%22%20r%3D%2210%22%20fill%3D%22%230a0e0d%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22220%22%20cy%3D%22185%22%20r%3D%2210%22%20fill%3D%22%230a0e0d%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M178%20205%20L206%20205%20L192%20232%20Z%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%20stroke-width%3D%228%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M302%20310%20L220%20448%20M468%20318%20L445%20466%22%20fill%3D%22none%22%20class%3D%22ink%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Ccircle%20cx%3D%22190%22%20cy%3D%22610%22%20r%3D%2218%22%20fill%3D%22%23a6a7ca%22%20class%3D%22ink%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22530%22%20cy%3D%22610%22%20r%3D%2218%22%20fill%3D%22%23a6a7ca%22%20class%3D%22ink%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22850%22%20cy%3D%22610%22%20r%3D%2218%22%20fill%3D%22%23a6a7ca%22%20class%3D%22ink%22%2F%3E%0A%3C%2Fsvg%3E%0A" alt="橙色小鸟趴在栏杆上的风格参考" loading="lazy" />
+            <figcaption>松一点、慢一点，但一直在飞。</figcaption>
+          </figure>
+          <figure>
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201080%201080%22%20role%3D%22img%22%20aria-labelledby%3D%22title%20desc%22%3E%0A%20%20%3Ctitle%20id%3D%22title%22%3E%E6%9D%BE%E5%BC%9B%E9%98%85%E8%AF%BB%E6%83%85%E7%BB%AA%E5%9B%BE%3C%2Ftitle%3E%0A%20%20%3Cdesc%20id%3D%22desc%22%3E%E6%89%8B%E7%BB%98%E4%BA%BA%E7%89%A9%E8%BA%BA%E5%9C%A8%E6%B2%99%E5%8F%91%E4%B8%8A%E8%AF%BB%E4%B9%A6%EF%BC%8C%E4%BB%A3%E8%A1%A8%E6%9D%BE%E5%BC%9B%E3%80%81%E6%85%A2%E8%8A%82%E5%A5%8F%E5%92%8C%E5%88%9B%E4%BD%9C%E8%A7%82%E5%AF%9F%E3%80%82%3C%2Fdesc%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20.ink%7Bstroke%3A%230a0e0d%3Bstroke-width%3A11%3Bstroke-linecap%3Around%3Bstroke-linejoin%3Around%7D%0A%20%20%20%20.font%7Bfont-family%3A%22Microsoft%20YaHei%22%2C%22PingFang%20SC%22%2CArial%2Csans-serif%3Bfont-weight%3A900%7D%0A%20%20%3C%2Fstyle%3E%0A%20%20%3Crect%20width%3D%221080%22%20height%3D%221080%22%20fill%3D%22%23fff7df%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M115%20375%20C180%20250%20330%20225%20430%20310%20C538%20205%20750%20210%20865%20340%20C966%20455%20955%20660%20840%20760%20C700%20880%20400%20880%20205%20770%20C92%20705%2048%20495%20115%20375Z%22%20fill%3D%22%23e4d0ad%22%20class%3D%22ink%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M170%20660%20C275%20625%20456%20630%20596%20672%20C725%20710%20835%20692%20925%20630%22%20fill%3D%22none%22%20class%3D%22ink%22%20opacity%3D%22.35%22%2F%3E%0A%20%20%3Cg%20transform%3D%22translate(220%20430)%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%20210%20C80%20155%20190%20150%20300%20188%20L278%20276%20C165%20285%2070%20278%20-8%20240Z%22%20fill%3D%22%237f934d%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M230%20182%20C300%20132%20390%20124%20470%20160%20C430%20220%20335%20262%20250%20238Z%22%20fill%3D%22%237f934d%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M428%20142%20C512%2096%20632%20105%20688%20178%20C646%20236%20542%20246%20472%20205Z%22%20fill%3D%22%230a0e0d%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M548%20102%20L690%20146%20L636%20258%20L494%20208Z%22%20fill%3D%22%23f6e899%22%20class%3D%22ink%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M42%20240%20C20%20294%2068%20318%20112%20276%20M306%20240%20C332%20304%20395%20296%20410%20232%22%20fill%3D%22%23f7d6c3%22%20class%3D%22ink%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Ctext%20x%3D%22126%22%20y%3D%22145%22%20class%3D%22font%22%20font-size%3D%2254%22%20fill%3D%22%230a0e0d%22%3E%E6%85%A2%E4%B8%80%E7%82%B9%EF%BC%8C%E4%B9%9F%E6%98%AF%E5%9C%A8%E8%A7%82%E5%AF%9F%E3%80%82%3C%2Ftext%3E%0A%20%20%3Cpath%20d%3D%22M130%20185%20C220%20170%20320%20170%20410%20185%22%20stroke%3D%22%23f99405%22%20stroke-width%3D%2213%22%20stroke-linecap%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E%0A" alt="躺在沙发上读书的手绘风格参考" loading="lazy" />
+            <figcaption>把可爱留在气质里，把专业留在结构里。</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="contact-band" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">如果你也喜欢慢慢打磨出来的创意，欢迎和我聊聊。</h2>
+          <p>我可能看起来慢悠悠，但回消息不会太慢。</p>
+        </div>
+        <div class="contact-actions" id="contactActions"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Lazy Bird Portfolio</span>
+      <span>把每一个想法，慢慢变成有意义的作品。</span>
+    </footer>
+
+    <dialog class="project-dialog" id="projectDialog" aria-labelledby="dialogTitle">
+      <div class="dialog-shell" id="dialogShell"></div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
